@@ -1,37 +1,37 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:01.672
+00:00:00.000 --> 00:00:01.883
 Não comece pelos detalhes.
 
-00:00:01.672 --> 00:00:29.682
+00:00:01.883 --> 00:00:33.416
 Um workflow pode parecer complexo quando vemos dezenas de nós ao mesmo tempo. A forma mais segura de ler é ignorar, no primeiro momento, expressões e campos individuais. Comece pela história. Descubra onde o fluxo inicia, por quais blocos principais ele passa, onde toma decisões e quais efeitos produz. Só depois abra cada nó. Essa leitura em camadas evita que um detalhe local esconda a lógica principal.
 
-00:00:29.682 --> 00:00:33.027
+00:00:33.416 --> 00:00:37.181
 Encontre o gatilho e o contrato de entrada.
 
-00:00:33.027 --> 00:01:02.291
+00:00:37.181 --> 00:01:10.127
 O primeiro nó responde quando e por que o workflow começa. Pode ser um webhook, uma agenda ou uma chamada de outro fluxo. Em seguida, identifique o contrato de entrada. Quais campos são obrigatórios? O que acontece quando falta valor, moeda ou identificador do pedido? Um fluxo robusto torna essa validação visível logo no começo. Se dados ruins avançam, o erro aparece mais tarde e costuma parecer problema do destino.
 
-00:01:02.291 --> 00:01:03.963
+00:01:10.127 --> 00:01:12.010
 Separe transformação de decisão.
 
-00:01:03.963 --> 00:01:35.318
+00:01:12.010 --> 00:01:47.309
 Transformar é mudar a forma do dado. Decidir é escolher um caminho. Na normalização, nomes diferentes viram nomes canônicos, números passam a ter tipo consistente e itens ganham uma estrutura comum. Em um nó de decisão, o fluxo pergunta, por exemplo, se o pedido está aprovado ou se determinado destino deve receber o evento. Misturar essas duas funções torna o workflow difícil de testar. Procure nós com propósito único e nomes que expliquem a ação.
 
-00:01:35.318 --> 00:01:37.408
+00:01:47.309 --> 00:01:49.662
 Leia conexões e caminhos negativos.
 
-00:01:37.408 --> 00:02:05.836
+00:01:49.662 --> 00:02:21.666
 As conexões mostram ordem e dependência. Siga primeiro o caminho de sucesso, do início ao fim. Depois volte e procure os caminhos negativos: validação recusada, resposta inesperada, timeout e limite de tentativas. Um workflow não está compreendido enquanto só conhecemos o caminho feliz. Observe também junções e execuções paralelas. Se dois ramos se reencontram, descubra se ambos são necessários ou se qualquer um pode liberar a próxima etapa.
 
-00:02:05.836 --> 00:02:07.508
+00:02:21.666 --> 00:02:23.549
 Inspecione entradas e saídas.
 
-00:02:07.508 --> 00:02:34.682
+00:02:23.549 --> 00:02:54.141
 Agora abra os nós importantes. Compare a entrada com a saída. Pergunte quais campos nasceram, quais mudaram e quais desapareceram. Em chamadas HTTP, verifique método, cabeçalhos permitidos, corpo enviado, status recebido e tratamento da resposta. Não copie credenciais nem dados pessoais para materiais de aula. Use exemplos sanitizados. A leitura deve produzir um mapa simples: este nó recebeu isto, aplicou esta regra e entregou aquilo.
 
-00:02:34.682 --> 00:02:36.354
+00:02:54.141 --> 00:02:56.024
 Feche com cinco perguntas.
 
-00:02:36.354 --> 00:03:03.528
+00:02:56.024 --> 00:03:26.616
 Para concluir, responda cinco perguntas. O que inicia o workflow? Qual contrato ele exige? Onde os dados são transformados? Em quais pontos o caminho se divide? Como o resultado fica comprovado? Se alguma resposta não está clara, esse é o lugar para aprofundar. Ler um workflow não é decorar nós. É reconstruir a sequência de decisões e efeitos até conseguir explicá-la sem a interface aberta.
