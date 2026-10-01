@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17151f">
+  <meta name="description" content="Curso interativo de n8n aplicado às operações de tracking da Sourei.">
+  <title>n8n aplicado | Sourei Lab</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="public/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="topbar">
+    <button id="menu-toggle" class="icon-button menu-toggle" aria-label="Abrir módulos" aria-expanded="false">☰</button>
+    <a class="brand" href="#home" aria-label="Sourei Lab, início"><span class="brand-mark" aria-hidden="true">S</span><span>SOUREI <b>LAB</b></span></a>
+    <label class="search-box"><span class="sr-only">Buscar no curso</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Buscar conceito, módulo..." autocomplete="off"></label>
+    <button id="theme-toggle" class="icon-button" aria-label="Alternar tema">◐</button>
+  </header>
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Navegação do curso">
+      <div class="progress-card">
+        <div class="progress-copy"><span>Seu progresso</span><strong id="progress-label">0%</strong></div>
+        <div id="progress-bar" class="progress-track" role="progressbar" aria-label="Progresso do curso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+      </div>
+      <nav id="module-nav" aria-label="Módulos"></nav>
+      <nav class="reference-nav" aria-label="Referências">
+        <a href="#inventory">Inventário real</a>
+        <a href="#examples">Raio-X dos workflows</a>
+        <a href="#materials">Materiais práticos</a>
+        <a href="#glossary">Glossário</a>
+        <a href="#progress">Meus dados</a>
+      </nav>
+    </aside>
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <div id="search-panel" class="search-panel" hidden aria-label="Resultados da busca"></div>
+  <div id="announcer" class="sr-only" aria-live="polite"></div>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

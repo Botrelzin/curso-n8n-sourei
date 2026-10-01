@@ -1,0 +1,27 @@
+Escolha uma chave estável.
+
+Para rastrear uma compra, precisamos seguir a mesma entidade em sistemas diferentes. Comece com uma chave estável do pedido e anote também o tipo do evento e o horário aproximado. Use dados de demonstração, nunca dados pessoais reais. A chave deve aparecer nos registros da origem, nas execuções do n8n e nos payloads de destino. Se cada camada inventa um identificador sem relação, a investigação quebra no meio.
+
+Confirme a origem.
+
+Primeiro, confirme que a loja realmente declarou o pedido aprovado. Registre o horário, o status e os campos comerciais essenciais: valor, moeda, itens e quantidades. Depois procure o recebimento no Purchasecron. Compare a chave e a janela de tempo. O objetivo desta etapa não é provar o envio aos destinos. É provar que o fato comercial existiu e entrou na nossa operação uma única vez.
+
+Abra a execução do n8n.
+
+No n8n, localize a execução pela chave ou pelo horário. Verifique se o workflow correto iniciou e siga nó por nó. Compare a entrada bruta com o evento normalizado. O identificador da transação permaneceu estável? Valor e moeda têm tipos corretos? A lista de itens conserva produto, preço e quantidade? Se houver uma bifurcação, confirme qual condição escolheu o caminho. Salve a evidência do primeiro ponto em que o resultado diverge.
+
+Verifique identidade e deduplicação.
+
+Antes do envio, confira duas camadas diferentes. A identidade reúne sinais permitidos, normalizados e tratados conforme consentimento. Ela ajuda o destino a associar o evento. A deduplicação usa uma chave estável para impedir que a mesma compra seja contada novamente. Não confunda as duas. Melhorar matching não substitui deduplicar. E repetir uma compra para recuperar uma falha exige preservar a chave esperada por cada destino.
+
+Inspecione o envio e a resposta.
+
+No GTM server ou no nó responsável pelo envio, verifique o payload produzido. Para uma coleta por Measurement Protocol, procure o identificador apropriado, o evento purchase e os parâmetros de valor, moeda e itens. Em outros destinos, confira o adaptador correspondente. Depois leia a resposta: status, corpo útil, horário e número da tentativa. Um status de transporte positivo não garante qualidade de dados. Compare também o que o destino recebeu ou disponibilizou para diagnóstico.
+
+Compare os ramos do fan-out.
+
+Repita a verificação para cada ramo esperado. Analytics pode ter sucesso enquanto uma plataforma de mídia falha. Registre o estado por destino, sem transformar o evento inteiro em um único sucesso ou erro. Se um ramo precisar de retry, recupere apenas esse envio. Essa independência reduz duplicação e preserva as evidências dos destinos que já concluíram.
+
+Monte a linha do tempo.
+
+Feche a investigação com uma linha do tempo curta: pedido aprovado, webhook recebido, execução iniciada, evento normalizado, envios realizados e respostas registradas. Aponte o primeiro desvio, não apenas o último sintoma. Assim, rastrear um purchase deixa de ser procurar uma compra em várias telas. Passa a ser seguir uma chave, comparar contratos e reunir provas de cada transição.

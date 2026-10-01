@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="04-normalizacao-pedido-title 04-normalizacao-pedido-desc">
+  <title id="04-normalizacao-pedido-title">Normalização de pedido</title>
+  <desc id="04-normalizacao-pedido-desc">Transforme variações da plataforma em um contrato interno estável.</desc>
+  <style>
+    svg { background:#ffffff; font-family:Inter,Segoe UI,Arial,sans-serif; }
+    .kicker { font-size:13px; font-weight:800; letter-spacing:2px; fill:#12727c; }
+    .heading { font-size:29px; font-weight:800; fill:#111827; }
+    .intro { font-size:14px; fill:#4b5563; }
+    .node-title { font-size:16px; font-weight:800; fill:#111827; }
+    .node-sub { font-size:12px; fill:#4b5563; }
+    .badge { font-size:12px; font-weight:800; fill:#ffffff; }
+    .edge-label { font-size:11px; font-weight:700; fill:#4b5563; }
+    .section { font-size:12px; font-weight:800; letter-spacing:1.4px; fill:#1e4a96; }
+    .note { font-size:13px; fill:#374151; }
+    .note-strong { font-size:13px; font-weight:800; fill:#111827; }
+    .footer { font-size:12px; fill:#6b7280; }
+    .mono { font-family:Consolas,monospace; font-size:12px; fill:#163a78; }
+    @media (prefers-reduced-motion: reduce) { * { animation:none!important; } }
+  </style>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="0" y="0" width="16" height="675" fill="#1e4a96"/>
+  <rect x="16" y="0" width="7" height="675" fill="#25acb9"/>
+  <text x="58" y="52" class="kicker">QUALIDADE DE DADOS</text>
+  <text x="58" y="88" class="heading">Normalização de pedido</text>
+  <text x="58" y="116" class="intro">Transforme variações da plataforma em um contrato interno estável.</text>
+  <line x1="58" y1="137" x2="1142" y2="137" stroke="#e3e5ea"/>
+  <g class="node"><rect x="58" y="196" width="220" height="294" rx="16" fill="#f4f6f9" stroke="#4b5563" stroke-width="2"/><circle cx="86" cy="224" r="14" fill="#4b5563"/><text x="86" y="229" class="badge" text-anchor="middle">{ }</text><text x="114" y="231" class="node-title" text-anchor="start">Pedido bruto</text><text x="114" y="253" class="node-sub" text-anchor="start">campos da plataforma</text></g><text x="82" y="285" class="mono" text-anchor="start">número do pedido</text><text x="82" y="312" class="mono" text-anchor="start">valor e moeda</text><text x="82" y="339" class="mono" text-anchor="start">itens e quantidades</text><text x="82" y="366" class="mono" text-anchor="start">cliente e contexto</text><text x="82" y="393" class="mono" text-anchor="start">status do pagamento</text><path d="M 278 343 L 438 343" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="438,343 427.0,336.4 427.0,349.6" fill="#12727c"/><rect x="303.0" y="318.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="358.0" y="334.0" class="edge-label" text-anchor="middle">mapear</text><g class="node"><rect x="438" y="224" width="252" height="238" rx="16" fill="#e7edf7" stroke="#1e4a96" stroke-width="2"/><circle cx="466" cy="252" r="14" fill="#1e4a96"/><text x="466" y="257" class="badge" text-anchor="middle">↺</text><text x="494" y="259" class="node-title" text-anchor="start">Normalizador</text><text x="494" y="281" class="node-sub" text-anchor="start">regras explícitas</text></g><text x="464" y="313" class="note" text-anchor="start">tipos consistentes</text><text x="464" y="340" class="note" text-anchor="start">nomes canônicos</text><text x="464" y="367" class="note" text-anchor="start">defaults seguros</text><text x="464" y="394" class="note" text-anchor="start">campos permitidos</text><path d="M 690 343 L 850 343" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="850,343 839.0,336.4 839.0,349.6" fill="#12727c"/><rect x="715.0" y="318.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="770.0" y="334.0" class="edge-label" text-anchor="middle">validar</text><g class="node"><rect x="850" y="196" width="292" height="294" rx="16" fill="#e2f4f5" stroke="#12727c" stroke-width="2"/><circle cx="878" cy="224" r="14" fill="#12727c"/><text x="878" y="229" class="badge" text-anchor="middle">✓</text><text x="906" y="231" class="node-title" text-anchor="start">Evento canônico</text><text x="906" y="253" class="node-sub" text-anchor="start">pronto para destinos</text></g><text x="876" y="285" class="mono" text-anchor="start">transaction_id</text><text x="876" y="312" class="mono" text-anchor="start">value + currency</text><text x="876" y="339" class="mono" text-anchor="start">items[]</text><text x="876" y="366" class="mono" text-anchor="start">user_data permitido</text><text x="876" y="393" class="mono" text-anchor="start">event_time</text><rect x="336" y="510" width="528" height="62" rx="14" fill="#fef3c7" stroke="#d97706"/><text x="600" y="548" class="note-strong" text-anchor="middle">Normalizar uma vez. Adaptar somente na borda de cada destino.</text>
+  <line x1="58" y1="628" x2="1142" y2="628" stroke="#e3e5ea"/>
+  <circle cx="70" cy="650" r="5" fill="#25acb9"/>
+  <text x="84" y="654" class="footer">O modelo canônico desacopla a origem das APIs de destino.</text>
+  <text x="1142" y="654" class="footer" text-anchor="end">SOUREI • N8N EM PRODUÇÃO</text>
+</svg>

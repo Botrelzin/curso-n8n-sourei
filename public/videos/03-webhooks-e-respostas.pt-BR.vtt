@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.676
+Webhook é um contrato.
+
+00:00:01.676 --> 00:00:29.741
+Um webhook é uma chamada iniciada pelo sistema de origem quando algo acontece. No nosso caso, pode ser a aprovação de um pedido. Mais importante do que decorar o formato é entender o contrato: quem envia, qual evento dispara, o que precisa chegar, em quanto tempo devemos responder e como o emissor reage quando há falha. Sem essas respostas, qualquer automação parece funcionar até o primeiro atraso.
+
+00:00:29.741 --> 00:00:31.836
+Receba e valide o mínimo.
+
+00:00:31.836 --> 00:01:00.320
+Ao receber a chamada, a primeira responsabilidade é verificar o mínimo necessário. O conteúdo pode ser lido? O evento é do tipo esperado? A origem atende ao mecanismo de autenticação definido? Os campos essenciais existem? Essa validação precisa ser curta. Operações demoradas, como chamar vários destinos, não devem segurar a conexão enquanto o emissor espera. O objetivo inicial é decidir se a mensagem pode ser aceita e protegida.
+
+00:01:00.320 --> 00:01:02.414
+A resposta fala do recebimento.
+
+00:01:02.414 --> 00:01:31.737
+Uma resposta de sucesso informa que a mensagem foi recebida conforme o contrato. Ela não prova, sozinha, que Analytics ou mídia paga já registraram a conversão. Quando o processamento será assíncrono, a resposta pode indicar aceitação e o trabalho continua depois. Respostas de erro também precisam ser intencionais. Rejeitar um conteúdo inválido é diferente de informar uma indisponibilidade transitória. Essa diferença orienta se o emissor deve corrigir ou tentar novamente.
+
+00:01:31.737 --> 00:01:33.831
+Persista antes do trabalho longo.
+
+00:01:33.831 --> 00:02:03.572
+Depois de aceitar, registre o evento em uma camada capaz de sobreviver a reinícios e oscilações. A persistência cria uma fronteira segura entre a chamada curta e o processamento longo. O worker pode então consumir o trabalho, normalizar o pedido e acionar os destinos. Se houver falha, ainda existe uma referência do que foi recebido. Sem essa proteção, um timeout ou reinício pode transformar uma venda válida em um evento perdido.
+
+00:02:03.572 --> 00:02:05.248
+Tente novamente com controle.
+
+00:02:05.248 --> 00:02:31.219
+Nem todo erro merece retry. Timeout, limitação temporária e indisponibilidade podem justificar nova tentativa. Payload inválido e regra de negócio recusada costumam exigir correção. Toda repetição precisa de limite, espera progressiva, motivo registrado e uma chave que impeça duplicação. Quando as tentativas acabam, o evento vai para uma fila de falhas. Depois da correção, um backfill controlado reprocessa apenas a janela necessária.
+
+00:02:31.219 --> 00:02:32.894
+Leia o ciclo completo.
+
+00:02:32.894 --> 00:03:00.960
+O ciclo correto fica assim: o emissor chama, o receptor valida, a resposta encerra a espera da origem, a persistência protege a mensagem e o worker executa o restante. Status e logs acompanham tudo. Essa separação não complica o sistema. Ela torna cada promessa explícita. Quando alguém pergunta se uma compra foi processada, não olhamos apenas a resposta do webhook. Seguimos as evidências até o resultado esperado.

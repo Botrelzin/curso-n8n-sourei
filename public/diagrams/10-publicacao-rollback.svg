@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="10-publicacao-rollback-title 10-publicacao-rollback-desc">
+  <title id="10-publicacao-rollback-title">Publicação e rollback</title>
+  <desc id="10-publicacao-rollback-desc">Transforme mudanças testadas em versões reversíveis e observadas.</desc>
+  <style>
+    svg { background:#ffffff; font-family:Inter,Segoe UI,Arial,sans-serif; }
+    .kicker { font-size:13px; font-weight:800; letter-spacing:2px; fill:#12727c; }
+    .heading { font-size:29px; font-weight:800; fill:#111827; }
+    .intro { font-size:14px; fill:#4b5563; }
+    .node-title { font-size:16px; font-weight:800; fill:#111827; }
+    .node-sub { font-size:12px; fill:#4b5563; }
+    .badge { font-size:12px; font-weight:800; fill:#ffffff; }
+    .edge-label { font-size:11px; font-weight:700; fill:#4b5563; }
+    .section { font-size:12px; font-weight:800; letter-spacing:1.4px; fill:#1e4a96; }
+    .note { font-size:13px; fill:#374151; }
+    .note-strong { font-size:13px; font-weight:800; fill:#111827; }
+    .footer { font-size:12px; fill:#6b7280; }
+    .mono { font-family:Consolas,monospace; font-size:12px; fill:#163a78; }
+    @media (prefers-reduced-motion: reduce) { * { animation:none!important; } }
+  </style>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="0" y="0" width="16" height="675" fill="#1e4a96"/>
+  <rect x="16" y="0" width="7" height="675" fill="#25acb9"/>
+  <text x="58" y="52" class="kicker">MUDANÇA SEGURA</text>
+  <text x="58" y="88" class="heading">Publicação e rollback</text>
+  <text x="58" y="116" class="intro">Transforme mudanças testadas em versões reversíveis e observadas.</text>
+  <line x1="58" y1="137" x2="1142" y2="137" stroke="#e3e5ea"/>
+  <g class="node"><rect x="58" y="230" width="190" height="118" rx="16" fill="#f4f6f9" stroke="#4b5563" stroke-width="2"/><circle cx="86" cy="258" r="14" fill="#4b5563"/><text x="86" y="263" class="badge" text-anchor="middle">1</text><text x="114" y="265" class="node-title" text-anchor="start">Rascunho</text><text x="114" y="287" class="node-sub" text-anchor="start">mudança isolada</text></g><path d="M 248 289 L 326 289" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="326,289 315.0,282.4 315.0,295.6" fill="#12727c"/><rect x="232.0" y="264.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="287.0" y="280.0" class="edge-label" text-anchor="middle">revisar</text><g class="node"><rect x="326" y="230" width="190" height="118" rx="16" fill="#e7edf7" stroke="#1e4a96" stroke-width="2"/><circle cx="354" cy="258" r="14" fill="#1e4a96"/><text x="354" y="263" class="badge" text-anchor="middle">2</text><text x="382" y="265" class="node-title" text-anchor="start">Teste</text><text x="382" y="287" class="node-sub" text-anchor="start">casos e evidências</text></g><path d="M 516 289 L 594 289" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="594,289 583.0,282.4 583.0,295.6" fill="#12727c"/><rect x="500.0" y="264.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="555.0" y="280.0" class="edge-label" text-anchor="middle">aprovar</text><g class="node"><rect x="594" y="230" width="190" height="118" rx="16" fill="#e2f4f5" stroke="#12727c" stroke-width="2"/><circle cx="622" cy="258" r="14" fill="#12727c"/><text x="622" y="263" class="badge" text-anchor="middle">3</text><text x="650" y="265" class="node-title" text-anchor="start">Versão</text><text x="650" y="287" class="node-sub" text-anchor="start">snapshot nomeado</text></g><path d="M 784 289 L 862 289" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="862,289 851.0,282.4 851.0,295.6" fill="#12727c"/><rect x="768.0" y="264.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="823.0" y="280.0" class="edge-label" text-anchor="middle">publicar</text><g class="node"><rect x="862" y="230" width="190" height="118" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><circle cx="890" cy="258" r="14" fill="#16a34a"/><text x="890" y="263" class="badge" text-anchor="middle">4</text><text x="918" y="265" class="node-title" text-anchor="start">Produção</text><text x="918" y="287" class="node-sub" text-anchor="start">monitorar sinais</text></g><path d="M 957 348 L 957 444" fill="none" stroke="#d14343" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/><polygon points="957,444 963.6,433.0 950.4,433.0" fill="#d14343"/><rect x="902.0" y="371.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="957.0" y="387.0" class="edge-label" text-anchor="middle">regressão</text><g class="node"><rect x="820" y="444" width="274" height="96" rx="16" fill="#fbe4e4" stroke="#d14343" stroke-width="2"/><circle cx="848" cy="472" r="14" fill="#d14343"/><text x="848" y="477" class="badge" text-anchor="middle">↶</text><text x="876" y="479" class="node-title" text-anchor="start">Rollback</text><text x="876" y="501" class="node-sub" text-anchor="start">voltar à versão estável</text></g><path d="M 820 492 L 690 492" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="690,492 701.0,498.6 701.0,485.4" fill="#12727c"/><rect x="700.0" y="467.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="755.0" y="483.0" class="edge-label" text-anchor="middle">restaura</text><g class="node"><rect x="458" y="444" width="232" height="96" rx="16" fill="#e7edf7" stroke="#1e4a96" stroke-width="2"/><circle cx="486" cy="472" r="14" fill="#1e4a96"/><text x="486" y="477" class="badge" text-anchor="middle">✓</text><text x="514" y="479" class="node-title" text-anchor="start">Versão anterior</text><text x="514" y="501" class="node-sub" text-anchor="start">estado conhecido</text></g><rect x="58" y="420" width="330" height="122" rx="14" fill="#fef3c7" stroke="#d97706"/><text x="84" y="451" class="section" text-anchor="start">PORTÃO HUMANO</text><text x="84" y="479" class="note-strong" text-anchor="start">Publicar exige evidência, dono</text><text x="84" y="502" class="note" text-anchor="start">e plano de retorno.</text>
+  <line x1="58" y1="628" x2="1142" y2="628" stroke="#e3e5ea"/>
+  <circle cx="70" cy="650" r="5" fill="#25acb9"/>
+  <text x="84" y="654" class="footer">Snapshot, responsável, monitoramento e retorno fazem parte da publicação.</text>
+  <text x="1142" y="654" class="footer" text-anchor="end">SOUREI • N8N EM PRODUÇÃO</text>
+</svg>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="07-fanout-destinos-title 07-fanout-destinos-desc">
+  <title id="07-fanout-destinos-title">Fan-out para destinos</title>
+  <desc id="07-fanout-destinos-desc">Uma entrada confiável alimenta saídas independentes, cada uma com seu contrato.</desc>
+  <style>
+    svg { background:#ffffff; font-family:Inter,Segoe UI,Arial,sans-serif; }
+    .kicker { font-size:13px; font-weight:800; letter-spacing:2px; fill:#12727c; }
+    .heading { font-size:29px; font-weight:800; fill:#111827; }
+    .intro { font-size:14px; fill:#4b5563; }
+    .node-title { font-size:16px; font-weight:800; fill:#111827; }
+    .node-sub { font-size:12px; fill:#4b5563; }
+    .badge { font-size:12px; font-weight:800; fill:#ffffff; }
+    .edge-label { font-size:11px; font-weight:700; fill:#4b5563; }
+    .section { font-size:12px; font-weight:800; letter-spacing:1.4px; fill:#1e4a96; }
+    .note { font-size:13px; fill:#374151; }
+    .note-strong { font-size:13px; font-weight:800; fill:#111827; }
+    .footer { font-size:12px; fill:#6b7280; }
+    .mono { font-family:Consolas,monospace; font-size:12px; fill:#163a78; }
+    @media (prefers-reduced-motion: reduce) { * { animation:none!important; } }
+  </style>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="0" y="0" width="16" height="675" fill="#1e4a96"/>
+  <rect x="16" y="0" width="7" height="675" fill="#25acb9"/>
+  <text x="58" y="52" class="kicker">ORQUESTRAÇÃO DE SAÍDA</text>
+  <text x="58" y="88" class="heading">Fan-out para destinos</text>
+  <text x="58" y="116" class="intro">Uma entrada confiável alimenta saídas independentes, cada uma com seu contrato.</text>
+  <line x1="58" y1="137" x2="1142" y2="137" stroke="#e3e5ea"/>
+  <g class="node"><rect x="58" y="258" width="218" height="126" rx="16" fill="#e2f4f5" stroke="#12727c" stroke-width="2"/><circle cx="86" cy="286" r="14" fill="#12727c"/><text x="86" y="291" class="badge" text-anchor="middle">1</text><text x="114" y="293" class="node-title" text-anchor="start">Evento canônico</text><text x="114" y="315" class="node-sub" text-anchor="start">uma fonte confiável</text></g><path d="M 276 321 L 436 321" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="436,321 425.0,314.4 425.0,327.6" fill="#12727c"/><rect x="301.0" y="296.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="356.0" y="312.0" class="edge-label" text-anchor="middle">distribui</text><g class="node"><rect x="436" y="240" width="232" height="162" rx="16" fill="#e7edf7" stroke="#1e4a96" stroke-width="2"/><circle cx="464" cy="268" r="14" fill="#1e4a96"/><text x="464" y="273" class="badge" text-anchor="middle">2</text><text x="492" y="275" class="node-title" text-anchor="start">Roteador</text><text x="492" y="297" class="node-sub" text-anchor="start">regras por destino</text></g><path d="M 668 280 L 830 210" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="830,210 817.3,208.3 822.5,220.4" fill="#12727c"/><rect x="694.0" y="220.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="749.0" y="236.0" class="edge-label" text-anchor="middle">adaptador A</text><path d="M 668 321 L 830 321" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="830,321 819.0,314.4 819.0,327.6" fill="#12727c"/><rect x="694.0" y="296.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="749.0" y="312.0" class="edge-label" text-anchor="middle">adaptador B</text><path d="M 668 362 L 830 432" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="830,432 822.5,421.6 817.3,433.7" fill="#12727c"/><rect x="694.0" y="372.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="749.0" y="388.0" class="edge-label" text-anchor="middle">adaptador C</text><g class="node"><rect x="830" y="166" width="312" height="90" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><circle cx="858" cy="194" r="14" fill="#16a34a"/><text x="858" y="199" class="badge" text-anchor="middle">A</text><text x="886" y="201" class="node-title" text-anchor="start">Analytics</text><text x="886" y="223" class="node-sub" text-anchor="start">sessão e receita</text></g><g class="node"><rect x="830" y="276" width="312" height="90" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><circle cx="858" cy="304" r="14" fill="#16a34a"/><text x="858" y="309" class="badge" text-anchor="middle">B</text><text x="886" y="311" class="node-title" text-anchor="start">Mídia paga</text><text x="886" y="333" class="node-sub" text-anchor="start">conversão e matching</text></g><g class="node"><rect x="830" y="386" width="312" height="90" rx="16" fill="#f4f6f9" stroke="#4b5563" stroke-width="2"/><circle cx="858" cy="414" r="14" fill="#4b5563"/><text x="858" y="419" class="badge" text-anchor="middle">C</text><text x="886" y="421" class="node-title" text-anchor="start">Dados internos</text><text x="886" y="443" class="node-sub" text-anchor="start">auditoria e reconciliação</text></g><rect x="58" y="472" width="610" height="92" rx="14" fill="#e7edf7" stroke="#1e4a96"/><text x="84" y="503" class="section" text-anchor="start">REGRA DE FAN-OUT</text><text x="84" y="531" class="note-strong" text-anchor="start">Falha em um destino não apaga o sucesso dos demais.</text>
+  <line x1="58" y1="628" x2="1142" y2="628" stroke="#e3e5ea"/>
+  <circle cx="70" cy="650" r="5" fill="#25acb9"/>
+  <text x="84" y="654" class="footer">Isole adaptadores, respostas e tentativas por destino.</text>
+  <text x="1142" y="654" class="footer" text-anchor="end">SOUREI • N8N EM PRODUÇÃO</text>
+</svg>

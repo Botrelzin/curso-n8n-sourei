@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="06-measurement-protocol-title 06-measurement-protocol-desc">
+  <title id="06-measurement-protocol-title">Measurement Protocol</title>
+  <desc id="06-measurement-protocol-desc">O evento canônico vira um payload explícito, enviado e observado pelo servidor.</desc>
+  <style>
+    svg { background:#ffffff; font-family:Inter,Segoe UI,Arial,sans-serif; }
+    .kicker { font-size:13px; font-weight:800; letter-spacing:2px; fill:#12727c; }
+    .heading { font-size:29px; font-weight:800; fill:#111827; }
+    .intro { font-size:14px; fill:#4b5563; }
+    .node-title { font-size:16px; font-weight:800; fill:#111827; }
+    .node-sub { font-size:12px; fill:#4b5563; }
+    .badge { font-size:12px; font-weight:800; fill:#ffffff; }
+    .edge-label { font-size:11px; font-weight:700; fill:#4b5563; }
+    .section { font-size:12px; font-weight:800; letter-spacing:1.4px; fill:#1e4a96; }
+    .note { font-size:13px; fill:#374151; }
+    .note-strong { font-size:13px; font-weight:800; fill:#111827; }
+    .footer { font-size:12px; fill:#6b7280; }
+    .mono { font-family:Consolas,monospace; font-size:12px; fill:#163a78; }
+    @media (prefers-reduced-motion: reduce) { * { animation:none!important; } }
+  </style>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="0" y="0" width="16" height="675" fill="#1e4a96"/>
+  <rect x="16" y="0" width="7" height="675" fill="#25acb9"/>
+  <text x="58" y="52" class="kicker">ENVIO SERVER-SIDE</text>
+  <text x="58" y="88" class="heading">Measurement Protocol</text>
+  <text x="58" y="116" class="intro">O evento canônico vira um payload explícito, enviado e observado pelo servidor.</text>
+  <line x1="58" y1="137" x2="1142" y2="137" stroke="#e3e5ea"/>
+  <g class="node"><rect x="58" y="230" width="202" height="128" rx="16" fill="#e2f4f5" stroke="#12727c" stroke-width="2"/><circle cx="86" cy="258" r="14" fill="#12727c"/><text x="86" y="263" class="badge" text-anchor="middle">1</text><text x="114" y="265" class="node-title" text-anchor="start">Evento canônico</text><text x="114" y="287" class="node-sub" text-anchor="start">purchase validado</text></g><path d="M 260 294 L 336 294" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="336,294 325.0,287.4 325.0,300.6" fill="#12727c"/><rect x="243.0" y="269.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="298.0" y="285.0" class="edge-label" text-anchor="middle">monta</text><g class="node"><rect x="336" y="196" width="282" height="196" rx="16" fill="#e7edf7" stroke="#1e4a96" stroke-width="2"/><circle cx="364" cy="224" r="14" fill="#1e4a96"/><text x="364" y="229" class="badge" text-anchor="middle">2</text><text x="392" y="231" class="node-title" text-anchor="start">Payload de medição</text><text x="392" y="253" class="node-sub" text-anchor="start">campos obrigatórios</text></g><text x="364" y="288" class="mono" text-anchor="start">client_id ou user_id</text><text x="364" y="315" class="mono" text-anchor="start">events: purchase</text><text x="364" y="342" class="mono" text-anchor="start">params: valor, moeda, itens</text><path d="M 618 294 L 696 294" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="696,294 685.0,287.4 685.0,300.6" fill="#12727c"/><rect x="602.0" y="269.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="657.0" y="285.0" class="edge-label" text-anchor="middle">HTTP</text><g class="node"><rect x="696" y="230" width="204" height="128" rx="16" fill="#e2f4f5" stroke="#12727c" stroke-width="2"/><circle cx="724" cy="258" r="14" fill="#12727c"/><text x="724" y="263" class="badge" text-anchor="middle">3</text><text x="752" y="265" class="node-title" text-anchor="start">Endpoint</text><text x="752" y="287" class="node-sub" text-anchor="start">coleta do destino</text></g><path d="M 900 294 L 976 294" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="976,294 965.0,287.4 965.0,300.6" fill="#12727c"/><rect x="883.0" y="269.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="938.0" y="285.0" class="edge-label" text-anchor="middle">resposta</text><g class="node"><rect x="976" y="230" width="166" height="128" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><circle cx="1004" cy="258" r="14" fill="#16a34a"/><text x="1004" y="263" class="badge" text-anchor="middle">4</text><text x="1032" y="265" class="node-title" text-anchor="start">Registro</text><text x="1032" y="287" class="node-sub" text-anchor="start">status + tentativa</text></g><rect x="58" y="446" width="1084" height="98" rx="16" fill="#f4f6f9" stroke="#cdd0d6"/><text x="84" y="478" class="section" text-anchor="start">CHECKLIST ANTES DO ENVIO</text><text x="84" y="507" class="note-strong" text-anchor="start">Identificador válido  •  tempo coerente  •  moeda e valor  •  itens  •  consentimento  •  evidência da resposta</text>
+  <line x1="58" y1="628" x2="1142" y2="628" stroke="#e3e5ea"/>
+  <circle cx="70" cy="650" r="5" fill="#25acb9"/>
+  <text x="84" y="654" class="footer">Validar o contrato antes do POST evita silêncio e dados incompletos.</text>
+  <text x="1142" y="654" class="footer" text-anchor="end">SOUREI • N8N EM PRODUÇÃO</text>
+</svg>

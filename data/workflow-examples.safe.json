@@ -1,0 +1,6410 @@
+{
+  "source": "n8n Public API, live snapshot; parameters values and credentials omitted",
+  "examples": [
+    {
+      "name": "fontesradiadores.com.br",
+      "active": true,
+      "archived": false,
+      "updatedAt": "2025-08-18T13:40:00.873Z",
+      "node_count": 3,
+      "nodes": [
+        {
+          "key": "n1",
+          "name": "Webhook",
+          "type": "webhook",
+          "position": [
+            0,
+            0
+          ],
+          "parameter_fields": [
+            "httpMethod",
+            "options",
+            "path"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n2",
+          "name": "Code",
+          "type": "code",
+          "position": [
+            220,
+            0
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n3",
+          "name": "Append row in sheet",
+          "type": "googleSheets",
+          "position": [
+            460,
+            0
+          ],
+          "parameter_fields": [
+            "columns",
+            "documentId",
+            "operation",
+            "options",
+            "sheetName"
+          ],
+          "disabled": false
+        }
+      ],
+      "edges": [
+        {
+          "from": "n1",
+          "to": "n2",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n3",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        }
+      ]
+    },
+    {
+      "name": "decorcolorsfranquia.com.br",
+      "active": true,
+      "archived": false,
+      "updatedAt": "2026-06-26T17:21:29.702Z",
+      "node_count": 10,
+      "nodes": [
+        {
+          "key": "n1",
+          "name": "Webhook",
+          "type": "webhook",
+          "position": [
+            0,
+            0
+          ],
+          "parameter_fields": [
+            "httpMethod",
+            "options",
+            "path"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n2",
+          "name": "Code",
+          "type": "code",
+          "position": [
+            240,
+            0
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n3",
+          "name": "Append row in sheet",
+          "type": "googleSheets",
+          "position": [
+            500,
+            0
+          ],
+          "parameter_fields": [
+            "columns",
+            "documentId",
+            "operation",
+            "options",
+            "sheetName"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n4",
+          "name": "Filter",
+          "type": "filter",
+          "position": [
+            1020,
+            -620
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n5",
+          "name": "Filter1",
+          "type": "filter",
+          "position": [
+            1020,
+            -440
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n6",
+          "name": "Filter2",
+          "type": "filter",
+          "position": [
+            1020,
+            -260
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n7",
+          "name": "HTTP Request",
+          "type": "httpRequest",
+          "position": [
+            1280,
+            -620
+          ],
+          "parameter_fields": [
+            "bodyParameters",
+            "contentType",
+            "method",
+            "options",
+            "sendBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n8",
+          "name": "HTTP Request1",
+          "type": "httpRequest",
+          "position": [
+            1280,
+            -440
+          ],
+          "parameter_fields": [
+            "bodyParameters",
+            "contentType",
+            "method",
+            "options",
+            "sendBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n9",
+          "name": "HTTP Request2",
+          "type": "httpRequest",
+          "position": [
+            1280,
+            -260
+          ],
+          "parameter_fields": [
+            "bodyParameters",
+            "contentType",
+            "method",
+            "options",
+            "sendBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n10",
+          "name": "HTTP Request3",
+          "type": "httpRequest",
+          "position": [
+            820,
+            0
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        }
+      ],
+      "edges": [
+        {
+          "from": "n1",
+          "to": "n2",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n3",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n3",
+          "to": "n10",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n7",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n8",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n6",
+          "to": "n9",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        }
+      ]
+    },
+    {
+      "name": "[WA] - lojasimporium",
+      "active": true,
+      "archived": false,
+      "updatedAt": "2025-08-16T15:52:46.596Z",
+      "node_count": 10,
+      "nodes": [
+        {
+          "key": "n1",
+          "name": "tratamento dados",
+          "type": "set",
+          "position": [
+            -192,
+            0
+          ],
+          "parameter_fields": [
+            "assignments",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n2",
+          "name": "atualizar planilha",
+          "type": "googleSheets",
+          "position": [
+            512,
+            -96
+          ],
+          "parameter_fields": [
+            "columns",
+            "documentId",
+            "operation",
+            "options",
+            "sheetName"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n3",
+          "name": "trazer dados restantes",
+          "type": "googleSheets",
+          "position": [
+            736,
+            -96
+          ],
+          "parameter_fields": [
+            "documentId",
+            "filtersUI",
+            "options",
+            "sheetName"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n4",
+          "name": "parse contents",
+          "type": "code",
+          "position": [
+            1168,
+            -96
+          ],
+          "parameter_fields": [
+            "jsCode",
+            "mode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n5",
+          "name": "webhook",
+          "type": "webhook",
+          "position": [
+            -368,
+            0
+          ],
+          "parameter_fields": [
+            "httpMethod",
+            "options",
+            "path"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n6",
+          "name": "purchase",
+          "type": "httpRequest",
+          "position": [
+            1376,
+            -96
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n7",
+          "name": "Edit Fields",
+          "type": "set",
+          "position": [
+            960,
+            -96
+          ],
+          "parameter_fields": [
+            "assignments",
+            "includeOtherFields",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n8",
+          "name": "verificar transaction_id",
+          "type": "googleSheets",
+          "position": [
+            16,
+            0
+          ],
+          "parameter_fields": [
+            "documentId",
+            "filtersUI",
+            "options",
+            "sheetName"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n9",
+          "name": "webhook reenviado",
+          "type": "googleSheets",
+          "position": [
+            512,
+            112
+          ],
+          "parameter_fields": [
+            "columns",
+            "documentId",
+            "operation",
+            "options",
+            "sheetName"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n10",
+          "name": "bloqueia reenvio shopify",
+          "type": "if",
+          "position": [
+            224,
+            0
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        }
+      ],
+      "edges": [
+        {
+          "from": "n1",
+          "to": "n8",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n3",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n3",
+          "to": "n7",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n6",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n1",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n7",
+          "to": "n4",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n8",
+          "to": "n10",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n10",
+          "to": "n2",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n10",
+          "to": "n9",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        }
+      ]
+    },
+    {
+      "name": "[WA][GA4-META] Beautyin - Order Hook",
+      "active": true,
+      "archived": false,
+      "updatedAt": "2026-08-01T20:11:56.926Z",
+      "node_count": 14,
+      "nodes": [
+        {
+          "key": "n1",
+          "name": "Prepare GA4 Payload",
+          "type": "function",
+          "position": [
+            624,
+            64
+          ],
+          "parameter_fields": [
+            "functionCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n2",
+          "name": "Editar WebHook",
+          "type": "set",
+          "position": [
+            416,
+            64
+          ],
+          "parameter_fields": [
+            "assignments",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n3",
+          "name": "formatar itens para formato GA4",
+          "type": "code",
+          "position": [
+            0,
+            64
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n4",
+          "name": "GA4 Order",
+          "type": "httpRequest",
+          "position": [
+            864,
+            -64
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n5",
+          "name": "CAPI Order",
+          "type": "httpRequest",
+          "position": [
+            1248,
+            144
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n6",
+          "name": "meta normalizer",
+          "type": "set",
+          "position": [
+            864,
+            144
+          ],
+          "parameter_fields": [
+            "assignments",
+            "includeOtherFields",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n7",
+          "name": "contents e content_ids",
+          "type": "code",
+          "position": [
+            1056,
+            144
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n8",
+          "name": "GSHEETS - GA4 Enviado",
+          "type": "httpRequest",
+          "position": [
+            1248,
+            -192
+          ],
+          "parameter_fields": [
+            "method",
+            "options",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n9",
+          "name": "GSheets - CAPI Enviado",
+          "type": "httpRequest",
+          "position": [
+            1632,
+            144
+          ],
+          "parameter_fields": [
+            "method",
+            "options",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n10",
+          "name": "fix discounts",
+          "type": "code",
+          "position": [
+            208,
+            64
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n11",
+          "name": "beautyin",
+          "type": "webhook",
+          "position": [
+            -208,
+            64
+          ],
+          "parameter_fields": [
+            "httpMethod",
+            "options",
+            "path"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n12",
+          "name": "If",
+          "type": "if",
+          "position": [
+            1040,
+            -192
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n13",
+          "name": "Send a message",
+          "type": "discord",
+          "position": [
+            1040,
+            -48
+          ],
+          "parameter_fields": [
+            "channelId",
+            "embeds",
+            "guildId",
+            "options",
+            "resource"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n14",
+          "name": "If1",
+          "type": "if",
+          "position": [
+            1424,
+            144
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        }
+      ],
+      "edges": [
+        {
+          "from": "n1",
+          "to": "n4",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n1",
+          "to": "n6",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n1",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n3",
+          "to": "n10",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n14",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n6",
+          "to": "n7",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n7",
+          "to": "n5",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n12",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n13",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n10",
+          "to": "n2",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n11",
+          "to": "n3",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n12",
+          "to": "n8",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n12",
+          "to": "n13",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n14",
+          "to": "n9",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        }
+      ]
+    },
+    {
+      "name": "[WA][SOUREI] Amar Biquinis - Order Hook",
+      "active": true,
+      "archived": false,
+      "updatedAt": "2026-09-30T18:29:37.571Z",
+      "node_count": 142,
+      "nodes": [
+        {
+          "key": "n1",
+          "name": "Sticky Note",
+          "type": "stickyNote",
+          "position": [
+            -304,
+            -112
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n2",
+          "name": "GET - Buscar pedidos NuvemShop",
+          "type": "httpRequest",
+          "position": [
+            -512,
+            -32
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n3",
+          "name": "Sticky Note1",
+          "type": "stickyNote",
+          "position": [
+            32,
+            -112
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n4",
+          "name": "IF - SW = false1",
+          "type": "if",
+          "position": [
+            2144,
+            -208
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n5",
+          "name": "IF - SWF = false1",
+          "type": "if",
+          "position": [
+            2144,
+            128
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n6",
+          "name": "ERROR - repeated_webhook1",
+          "type": "stopAndError",
+          "position": [
+            2368,
+            336
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n7",
+          "name": "GET - wascer_db - transaction_id",
+          "type": "httpRequest",
+          "position": [
+            656,
+            -32
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n8",
+          "name": "WEBHOOK REPETIDO1",
+          "type": "stopAndError",
+          "position": [
+            6752,
+            240
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n9",
+          "name": "GET - wascer_db - transaction_id (2)",
+          "type": "httpRequest",
+          "position": [
+            6288,
+            224
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n10",
+          "name": "JS - client_id generator",
+          "type": "code",
+          "position": [
+            1792,
+            1536
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n11",
+          "name": "POST - waster_db - save generator",
+          "type": "httpRequest",
+          "position": [
+            2048,
+            1536
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n12",
+          "name": "JS - return_webhook (2)",
+          "type": "code",
+          "position": [
+            1216,
+            -32
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n13",
+          "name": "JS - return_webhook (3)",
+          "type": "code",
+          "position": [
+            2288,
+            1536
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n14",
+          "name": "JS - payload_formatter (2)",
+          "type": "code",
+          "position": [
+            1520,
+            -32
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n15",
+          "name": "WEBHOOK REPETIDO2",
+          "type": "stopAndError",
+          "position": [
+            6704,
+            1792
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n16",
+          "name": "POST - gtm_server - ga4_order (3)",
+          "type": "httpRequest",
+          "position": [
+            4000,
+            1104
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n17",
+          "name": "POST - gtm_server - capi_order (3)",
+          "type": "httpRequest",
+          "position": [
+            4000,
+            1488
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n18",
+          "name": "IF - STATUS HTTP = ok (3)",
+          "type": "if",
+          "position": [
+            4624,
+            -208
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n19",
+          "name": "IF - STATUS HTTP = ok (4)",
+          "type": "if",
+          "position": [
+            4608,
+            400
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n20",
+          "name": "IF - STATUS HTTP = ok (5)",
+          "type": "if",
+          "position": [
+            4576,
+            1376
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n21",
+          "name": "IF - STATUS HTTP = ok (6)",
+          "type": "if",
+          "position": [
+            4560,
+            1968
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n22",
+          "name": "POST - waster_db - SW = true (3)",
+          "type": "httpRequest",
+          "position": [
+            4832,
+            1376
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n23",
+          "name": "POST - waster_db - SWF = true (3)",
+          "type": "httpRequest",
+          "position": [
+            4816,
+            1968
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n24",
+          "name": "POST - waster_db - SWF = true (2)",
+          "type": "httpRequest",
+          "position": [
+            4864,
+            400
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n25",
+          "name": "POST - waster_db - SW = true (2)",
+          "type": "httpRequest",
+          "position": [
+            4880,
+            -208
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n26",
+          "name": "MERGE (2)",
+          "type": "merge",
+          "position": [
+            5168,
+            80
+          ],
+          "parameter_fields": [
+            "numberInputs"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n27",
+          "name": "MERGE (3)",
+          "type": "merge",
+          "position": [
+            5136,
+            1632
+          ],
+          "parameter_fields": [
+            "numberInputs"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n28",
+          "name": "AGGREGATE (3)",
+          "type": "aggregate",
+          "position": [
+            5328,
+            1632
+          ],
+          "parameter_fields": [
+            "aggregate",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n29",
+          "name": "AGGREGATE (2)",
+          "type": "aggregate",
+          "position": [
+            5360,
+            80
+          ],
+          "parameter_fields": [
+            "aggregate",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n30",
+          "name": "WAIT - 1 MIN (2)",
+          "type": "wait",
+          "position": [
+            5568,
+            80
+          ],
+          "parameter_fields": [
+            "amount"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n31",
+          "name": "WAIT - 1 MIN (3)",
+          "type": "wait",
+          "position": [
+            5536,
+            1632
+          ],
+          "parameter_fields": [
+            "amount",
+            "unit"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n32",
+          "name": "IF - check_branchs (2)",
+          "type": "if",
+          "position": [
+            5776,
+            80
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n33",
+          "name": "IF - check_branchs (3)",
+          "type": "if",
+          "position": [
+            5744,
+            1632
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n34",
+          "name": "GET - wascer_db - generator_id",
+          "type": "httpRequest",
+          "position": [
+            6240,
+            1776
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n35",
+          "name": "IF - SW AND SWF = true (3)",
+          "type": "if",
+          "position": [
+            6464,
+            1776
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n36",
+          "name": "IF - SW AND SWF = true (2)",
+          "type": "if",
+          "position": [
+            6512,
+            224
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n37",
+          "name": "MERGE (5)",
+          "type": "merge",
+          "position": [
+            6752,
+            80
+          ],
+          "parameter_fields": [],
+          "disabled": false
+        },
+        {
+          "key": "n38",
+          "name": "MERGE (6)",
+          "type": "merge",
+          "position": [
+            6704,
+            1632
+          ],
+          "parameter_fields": [],
+          "disabled": false
+        },
+        {
+          "key": "n39",
+          "name": "Merge",
+          "type": "merge",
+          "position": [
+            7584,
+            64
+          ],
+          "parameter_fields": [
+            "numberInputs"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n40",
+          "name": "POST - set ok cron",
+          "type": "httpRequest",
+          "position": [
+            8144,
+            192
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n41",
+          "name": "Stop and Error1",
+          "type": "stopAndError",
+          "position": [
+            1344,
+            368
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n42",
+          "name": "POST - set ok cron2",
+          "type": "httpRequest",
+          "position": [
+            8144,
+            -96
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n43",
+          "name": "Stop and Error5",
+          "type": "stopAndError",
+          "position": [
+            8416,
+            -96
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n44",
+          "name": "If10",
+          "type": "if",
+          "position": [
+            7872,
+            80
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n45",
+          "name": "POST - gtm_server - ga4_order (3)1",
+          "type": "httpRequest",
+          "position": [
+            4000,
+            1792
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n46",
+          "name": "POST - gtm_server - capi_order (3)1",
+          "type": "httpRequest",
+          "position": [
+            4000,
+            2240
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n47",
+          "name": "IF - Verificar Backfill",
+          "type": "if",
+          "position": [
+            3632,
+            1568
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n48",
+          "name": "IF - Verificar Backfill1",
+          "type": "if",
+          "position": [
+            3472,
+            2240
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n49",
+          "name": "IF - Verificar Header Preview1",
+          "type": "if",
+          "position": [
+            2432,
+            -32
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n50",
+          "name": "IF - Verificar Backfill2",
+          "type": "if",
+          "position": [
+            3664,
+            -80
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n51",
+          "name": "IF - Verificar Backfill3",
+          "type": "if",
+          "position": [
+            3456,
+            720
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n52",
+          "name": "POST - gtm_server - ga4_order (3)2",
+          "type": "httpRequest",
+          "position": [
+            3968,
+            -560
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n53",
+          "name": "POST - gtm_server - capi_order (3)2",
+          "type": "httpRequest",
+          "position": [
+            3968,
+            -128
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n54",
+          "name": "POST - gtm_server - ga4_order (3)3",
+          "type": "httpRequest",
+          "position": [
+            4000,
+            224
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n55",
+          "name": "POST - gtm_server - capi_order (3)3",
+          "type": "httpRequest",
+          "position": [
+            4000,
+            720
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n56",
+          "name": "Sticky Note4",
+          "type": "stickyNote",
+          "position": [
+            3856,
+            160
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n57",
+          "name": "Sticky Note5",
+          "type": "stickyNote",
+          "position": [
+            3840,
+            -608
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n58",
+          "name": "WEBHOOK REPETIDO",
+          "type": "stopAndError",
+          "position": [
+            6304,
+            -1520
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n59",
+          "name": "GET - wascer_db - transaction_id (2)1",
+          "type": "httpRequest",
+          "position": [
+            5840,
+            -1536
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n60",
+          "name": "JS - return_webhook (2)1",
+          "type": "code",
+          "position": [
+            1536,
+            -1520
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n61",
+          "name": "IF - STATUS HTTP = ok (3)1",
+          "type": "if",
+          "position": [
+            4064,
+            -1968
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n62",
+          "name": "IF - STATUS HTTP = ok (4)1",
+          "type": "if",
+          "position": [
+            4064,
+            -1408
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n63",
+          "name": "POST - waster_db - SWF = true (2)1",
+          "type": "httpRequest",
+          "position": [
+            4320,
+            -1408
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n64",
+          "name": "POST - waster_db - SW = true (2)1",
+          "type": "httpRequest",
+          "position": [
+            4320,
+            -1968
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n65",
+          "name": "MERGE (2)1",
+          "type": "merge",
+          "position": [
+            4784,
+            -1680
+          ],
+          "parameter_fields": [
+            "numberInputs"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n66",
+          "name": "AGGREGATE (2)1",
+          "type": "aggregate",
+          "position": [
+            4976,
+            -1680
+          ],
+          "parameter_fields": [
+            "aggregate",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n67",
+          "name": "WAIT - 1 MIN (2)1",
+          "type": "wait",
+          "position": [
+            5184,
+            -1680
+          ],
+          "parameter_fields": [
+            "amount"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n68",
+          "name": "IF - check_branchs (2)1",
+          "type": "if",
+          "position": [
+            5392,
+            -1680
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n69",
+          "name": "IF - SW AND SWF = true (2)1",
+          "type": "if",
+          "position": [
+            6064,
+            -1536
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n70",
+          "name": "MERGE (5)1",
+          "type": "merge",
+          "position": [
+            6304,
+            -1680
+          ],
+          "parameter_fields": [],
+          "disabled": false
+        },
+        {
+          "key": "n71",
+          "name": "IF - Verificar Header Preview2",
+          "type": "if",
+          "position": [
+            2096,
+            -1520
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n72",
+          "name": "IF - Verificar Backfill4",
+          "type": "if",
+          "position": [
+            3104,
+            -2176
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n73",
+          "name": "POST - gtm_server - ga4_order (3)4",
+          "type": "httpRequest",
+          "position": [
+            3424,
+            -2384
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n74",
+          "name": "POST - gtm_server - capi_order (3)4",
+          "type": "httpRequest",
+          "position": [
+            3424,
+            -2192
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n75",
+          "name": "POST - gtm_server - ga4_order (3)5",
+          "type": "httpRequest",
+          "position": [
+            3424,
+            -1360
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n76",
+          "name": "POST - gtm_server - capi_order (3)5",
+          "type": "httpRequest",
+          "position": [
+            3424,
+            -1168
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n77",
+          "name": "Sticky Note6",
+          "type": "stickyNote",
+          "position": [
+            3280,
+            -1472
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n78",
+          "name": "Sticky Note7",
+          "type": "stickyNote",
+          "position": [
+            3264,
+            -2464
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n79",
+          "name": "If11",
+          "type": "if",
+          "position": [
+            5584,
+            -1520
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n80",
+          "name": "POST - set ok cron3",
+          "type": "httpRequest",
+          "position": [
+            5776,
+            -1328
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n81",
+          "name": "If12",
+          "type": "if",
+          "position": [
+            6032,
+            208
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n82",
+          "name": "POST - set ok cron4",
+          "type": "httpRequest",
+          "position": [
+            6288,
+            416
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n83",
+          "name": "If13",
+          "type": "if",
+          "position": [
+            6000,
+            1760
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n84",
+          "name": "POST - set ok cron5",
+          "type": "httpRequest",
+          "position": [
+            6256,
+            1968
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n85",
+          "name": "Sticky Note2",
+          "type": "stickyNote",
+          "position": [
+            3856,
+            1728
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n86",
+          "name": "Sticky Note3",
+          "type": "stickyNote",
+          "position": [
+            3840,
+            1024
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n87",
+          "name": "Sticky Note8",
+          "type": "stickyNote",
+          "position": [
+            592,
+            -112
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n88",
+          "name": "Sticky Note9",
+          "type": "stickyNote",
+          "position": [
+            1776,
+            -1600
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n89",
+          "name": "Sticky Note10",
+          "type": "stickyNote",
+          "position": [
+            2464,
+            1440
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n90",
+          "name": "JS - payload_formatter (3)",
+          "type": "code",
+          "position": [
+            2528,
+            1536
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n91",
+          "name": "Sticky Note11",
+          "type": "stickyNote",
+          "position": [
+            1456,
+            -112
+          ],
+          "parameter_fields": [
+            "color",
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n92",
+          "name": "GET - wascer_db - token_checkout",
+          "type": "httpRequest",
+          "position": [
+            96,
+            -32
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n93",
+          "name": "JS - value",
+          "type": "code",
+          "position": [
+            -240,
+            -32
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n94",
+          "name": "If",
+          "type": "if",
+          "position": [
+            1248,
+            528
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n95",
+          "name": "POST - set ok cron6",
+          "type": "httpRequest",
+          "position": [
+            2880,
+            -1632
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n96",
+          "name": "JS - CHECK STATUS WEBHOOK",
+          "type": "code",
+          "position": [
+            2400,
+            -1680
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n97",
+          "name": "JS - CHECK STATUS WEBHOOK1",
+          "type": "code",
+          "position": [
+            2400,
+            -1344
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n98",
+          "name": "If1",
+          "type": "if",
+          "position": [
+            2624,
+            -1968
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n99",
+          "name": "If2",
+          "type": "if",
+          "position": [
+            2880,
+            -2368
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n100",
+          "name": "If3",
+          "type": "if",
+          "position": [
+            2880,
+            -2176
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n101",
+          "name": "IF - Verificar Backfill6",
+          "type": "if",
+          "position": [
+            3104,
+            -1152
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n102",
+          "name": "POST - set ok cron7",
+          "type": "httpRequest",
+          "position": [
+            2880,
+            -688
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n103",
+          "name": "ERROR - repeated_webhook",
+          "type": "stopAndError",
+          "position": [
+            3088,
+            -688
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n104",
+          "name": "If4",
+          "type": "if",
+          "position": [
+            2624,
+            -1168
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n105",
+          "name": "If5",
+          "type": "if",
+          "position": [
+            2880,
+            -1344
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n106",
+          "name": "If6",
+          "type": "if",
+          "position": [
+            2880,
+            -1152
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n107",
+          "name": "ERROR - repeated_webhook2",
+          "type": "stopAndError",
+          "position": [
+            3104,
+            -1632
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n108",
+          "name": "JS - payload_formatter - token_checkout",
+          "type": "code",
+          "position": [
+            1840,
+            -1520
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n109",
+          "name": "IF - Verificar Backfill7",
+          "type": "if",
+          "position": [
+            3120,
+            -944
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n110",
+          "name": "If7",
+          "type": "if",
+          "position": [
+            2896,
+            -944
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n111",
+          "name": "IF - Verificar Backfill8",
+          "type": "if",
+          "position": [
+            3104,
+            -1920
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n112",
+          "name": "If8",
+          "type": "if",
+          "position": [
+            2880,
+            -1920
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n113",
+          "name": "IF - STATUS HTTP = ok (3)2",
+          "type": "if",
+          "position": [
+            4064,
+            -1680
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n114",
+          "name": "POST - waster_db - SW = true (2)2",
+          "type": "httpRequest",
+          "position": [
+            4320,
+            -1680
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n115",
+          "name": "POST - gtm_server - gads",
+          "type": "httpRequest",
+          "position": [
+            3424,
+            -960
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n116",
+          "name": "POST - gtm_server - gads1",
+          "type": "httpRequest",
+          "position": [
+            3424,
+            -1936
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n117",
+          "name": "IF - STATUS HTTP = ok (3)3",
+          "type": "if",
+          "position": [
+            4624,
+            96
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n118",
+          "name": "POST - waster_db - SW = true (2)3",
+          "type": "httpRequest",
+          "position": [
+            4880,
+            96
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n119",
+          "name": "IF - STATUS HTTP = ok (3)4",
+          "type": "if",
+          "position": [
+            4560,
+            1696
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n120",
+          "name": "POST - waster_db - SW = true (2)4",
+          "type": "httpRequest",
+          "position": [
+            4816,
+            1696
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n121",
+          "name": "IF - Verificar Backfill10",
+          "type": "if",
+          "position": [
+            3728,
+            -304
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n122",
+          "name": "If14",
+          "type": "if",
+          "position": [
+            3568,
+            -192
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n123",
+          "name": "POST - gtm_server - gads2",
+          "type": "httpRequest",
+          "position": [
+            3984,
+            -320
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n124",
+          "name": "IF - Verificar Backfill12",
+          "type": "if",
+          "position": [
+            3696,
+            2032
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n125",
+          "name": "If15",
+          "type": "if",
+          "position": [
+            3472,
+            2032
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n126",
+          "name": "POST - gtm_server - gads3",
+          "type": "httpRequest",
+          "position": [
+            4000,
+            2016
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n127",
+          "name": "IF - Verificar Backfill11",
+          "type": "if",
+          "position": [
+            3728,
+            1344
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n128",
+          "name": "If16",
+          "type": "if",
+          "position": [
+            3568,
+            1424
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n129",
+          "name": "POST - gtm_server - gads4",
+          "type": "httpRequest",
+          "position": [
+            4016,
+            1312
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n130",
+          "name": "IF - Verificar Backfill9",
+          "type": "if",
+          "position": [
+            3696,
+            512
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n131",
+          "name": "If9",
+          "type": "if",
+          "position": [
+            3472,
+            512
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n132",
+          "name": "POST - gtm_server - gads5",
+          "type": "httpRequest",
+          "position": [
+            4000,
+            496
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n133",
+          "name": "JS - CHECK STATUS WEBHOOK2",
+          "type": "code",
+          "position": [
+            2576,
+            -224
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n134",
+          "name": "JS - CHECK STATUS WEBHOOK3",
+          "type": "code",
+          "position": [
+            2576,
+            256
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n135",
+          "name": "If17",
+          "type": "if",
+          "position": [
+            2816,
+            -224
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n136",
+          "name": "If18",
+          "type": "if",
+          "position": [
+            2736,
+            256
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n137",
+          "name": "POST - set ok cron8",
+          "type": "httpRequest",
+          "position": [
+            3120,
+            0
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n138",
+          "name": "ERROR - repeated_webhook3",
+          "type": "stopAndError",
+          "position": [
+            3328,
+            0
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n139",
+          "name": "POST - set ok cron9",
+          "type": "httpRequest",
+          "position": [
+            2912,
+            688
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n140",
+          "name": "ERROR - repeated_webhook4",
+          "type": "stopAndError",
+          "position": [
+            3120,
+            688
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n141",
+          "name": "IF - Verificar Header Preview",
+          "type": "if",
+          "position": [
+            2720,
+            1440
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n142",
+          "name": "POST - webhook",
+          "type": "webhook",
+          "position": [
+            -768,
+            -32
+          ],
+          "parameter_fields": [
+            "httpMethod",
+            "options",
+            "path"
+          ],
+          "disabled": false
+        }
+      ],
+      "edges": [
+        {
+          "from": "n2",
+          "to": "n93",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n49",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n5",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n49",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n6",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n7",
+          "to": "n12",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n7",
+          "to": "n94",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n9",
+          "to": "n36",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n10",
+          "to": "n11",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n11",
+          "to": "n13",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n12",
+          "to": "n14",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n13",
+          "to": "n90",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n14",
+          "to": "n4",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n14",
+          "to": "n5",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n16",
+          "to": "n20",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n17",
+          "to": "n21",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n18",
+          "to": "n25",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n19",
+          "to": "n24",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n20",
+          "to": "n22",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n21",
+          "to": "n23",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n22",
+          "to": "n27",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n23",
+          "to": "n27",
+          "channel": "main",
+          "lane": 0,
+          "input": 2
+        },
+        {
+          "from": "n24",
+          "to": "n26",
+          "channel": "main",
+          "lane": 0,
+          "input": 2
+        },
+        {
+          "from": "n25",
+          "to": "n26",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n26",
+          "to": "n29",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n27",
+          "to": "n28",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n28",
+          "to": "n31",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n29",
+          "to": "n30",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n30",
+          "to": "n32",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n31",
+          "to": "n33",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n32",
+          "to": "n37",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n32",
+          "to": "n81",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n33",
+          "to": "n38",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n33",
+          "to": "n83",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n34",
+          "to": "n35",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n35",
+          "to": "n38",
+          "channel": "main",
+          "lane": 0,
+          "input": 1
+        },
+        {
+          "from": "n35",
+          "to": "n15",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n36",
+          "to": "n37",
+          "channel": "main",
+          "lane": 0,
+          "input": 1
+        },
+        {
+          "from": "n36",
+          "to": "n8",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n37",
+          "to": "n39",
+          "channel": "main",
+          "lane": 0,
+          "input": 1
+        },
+        {
+          "from": "n38",
+          "to": "n39",
+          "channel": "main",
+          "lane": 0,
+          "input": 2
+        },
+        {
+          "from": "n39",
+          "to": "n44",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n42",
+          "to": "n43",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n44",
+          "to": "n42",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n44",
+          "to": "n40",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n45",
+          "to": "n20",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n46",
+          "to": "n21",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n47",
+          "to": "n17",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n48",
+          "to": "n46",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n49",
+          "to": "n133",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n49",
+          "to": "n134",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n50",
+          "to": "n53",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n51",
+          "to": "n55",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n52",
+          "to": "n18",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n53",
+          "to": "n19",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n54",
+          "to": "n18",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n55",
+          "to": "n19",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n59",
+          "to": "n69",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n60",
+          "to": "n108",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n61",
+          "to": "n64",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n62",
+          "to": "n63",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n63",
+          "to": "n65",
+          "channel": "main",
+          "lane": 0,
+          "input": 2
+        },
+        {
+          "from": "n64",
+          "to": "n65",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n65",
+          "to": "n66",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n66",
+          "to": "n67",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n67",
+          "to": "n68",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n68",
+          "to": "n70",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n68",
+          "to": "n79",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n69",
+          "to": "n70",
+          "channel": "main",
+          "lane": 0,
+          "input": 1
+        },
+        {
+          "from": "n69",
+          "to": "n58",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n70",
+          "to": "n39",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n71",
+          "to": "n96",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n71",
+          "to": "n97",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n72",
+          "to": "n74",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n73",
+          "to": "n61",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n74",
+          "to": "n62",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n75",
+          "to": "n61",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n76",
+          "to": "n62",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n79",
+          "to": "n59",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n79",
+          "to": "n80",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n81",
+          "to": "n9",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n81",
+          "to": "n82",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n83",
+          "to": "n34",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n83",
+          "to": "n84",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n90",
+          "to": "n141",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n92",
+          "to": "n60",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n92",
+          "to": "n7",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n93",
+          "to": "n92",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n94",
+          "to": "n41",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n94",
+          "to": "n10",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n95",
+          "to": "n107",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n96",
+          "to": "n98",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n97",
+          "to": "n104",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n98",
+          "to": "n99",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n98",
+          "to": "n100",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n98",
+          "to": "n112",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n98",
+          "to": "n95",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n99",
+          "to": "n73",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n100",
+          "to": "n72",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n101",
+          "to": "n76",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n102",
+          "to": "n103",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n104",
+          "to": "n105",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n104",
+          "to": "n106",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n104",
+          "to": "n110",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n104",
+          "to": "n102",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n105",
+          "to": "n75",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n106",
+          "to": "n101",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n108",
+          "to": "n71",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n109",
+          "to": "n115",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n110",
+          "to": "n109",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n111",
+          "to": "n116",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n112",
+          "to": "n111",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n113",
+          "to": "n114",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n114",
+          "to": "n65",
+          "channel": "main",
+          "lane": 0,
+          "input": 1
+        },
+        {
+          "from": "n115",
+          "to": "n113",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n116",
+          "to": "n113",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n117",
+          "to": "n118",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n118",
+          "to": "n26",
+          "channel": "main",
+          "lane": 0,
+          "input": 1
+        },
+        {
+          "from": "n119",
+          "to": "n120",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n120",
+          "to": "n27",
+          "channel": "main",
+          "lane": 0,
+          "input": 1
+        },
+        {
+          "from": "n121",
+          "to": "n123",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n122",
+          "to": "n121",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n123",
+          "to": "n117",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n124",
+          "to": "n126",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n125",
+          "to": "n124",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n126",
+          "to": "n119",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n127",
+          "to": "n129",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n128",
+          "to": "n127",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n129",
+          "to": "n119",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n130",
+          "to": "n132",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n131",
+          "to": "n130",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n132",
+          "to": "n117",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n133",
+          "to": "n135",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n134",
+          "to": "n136",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n135",
+          "to": "n52",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n135",
+          "to": "n122",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n135",
+          "to": "n50",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n135",
+          "to": "n137",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n136",
+          "to": "n54",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n136",
+          "to": "n131",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n136",
+          "to": "n51",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n136",
+          "to": "n139",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n137",
+          "to": "n138",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n139",
+          "to": "n140",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n141",
+          "to": "n16",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n141",
+          "to": "n128",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n141",
+          "to": "n47",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n141",
+          "to": "n45",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n141",
+          "to": "n125",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n141",
+          "to": "n48",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n142",
+          "to": "n2",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        }
+      ]
+    },
+    {
+      "name": "[WA][GA4] DecorColors - Backfill",
+      "active": true,
+      "archived": false,
+      "updatedAt": "2026-06-11T23:52:00.592Z",
+      "node_count": 46,
+      "nodes": [
+        {
+          "key": "n1",
+          "name": "GA4 Order1",
+          "type": "httpRequest",
+          "position": [
+            -3616,
+            1424
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n2",
+          "name": "CAPI Order1",
+          "type": "httpRequest",
+          "position": [
+            -3408,
+            1696
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": true
+        },
+        {
+          "key": "n3",
+          "name": "WASTERDB DATA",
+          "type": "httpRequest",
+          "position": [
+            -5136,
+            2288
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n4",
+          "name": "WASTERDB DATA1",
+          "type": "httpRequest",
+          "position": [
+            -4208,
+            2880
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n5",
+          "name": "If1",
+          "type": "if",
+          "position": [
+            -3600,
+            1696
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n6",
+          "name": "PAYLOAD Formatter2",
+          "type": "code",
+          "position": [
+            -3440,
+            2592
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n7",
+          "name": "GA4 Order2",
+          "type": "httpRequest",
+          "position": [
+            -3040,
+            2336
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n8",
+          "name": "CAPI Order2",
+          "type": "httpRequest",
+          "position": [
+            -2800,
+            2592
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": true
+        },
+        {
+          "key": "n9",
+          "name": "RETURN WEBHOOK2",
+          "type": "code",
+          "position": [
+            -3664,
+            2592
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n10",
+          "name": "If2",
+          "type": "if",
+          "position": [
+            -3232,
+            2336
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n11",
+          "name": "If3",
+          "type": "if",
+          "position": [
+            -3008,
+            2592
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n12",
+          "name": "Stop and Error2",
+          "type": "stopAndError",
+          "position": [
+            -2896,
+            2800
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n13",
+          "name": "WASTERDB SAVE1",
+          "type": "httpRequest",
+          "position": [
+            -3152,
+            1424
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n14",
+          "name": "If4",
+          "type": "if",
+          "position": [
+            -3408,
+            1424
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n15",
+          "name": "WASTERDB SAVE2",
+          "type": "httpRequest",
+          "position": [
+            -2960,
+            1696
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n16",
+          "name": "If5",
+          "type": "if",
+          "position": [
+            -3184,
+            1696
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": true
+        },
+        {
+          "key": "n17",
+          "name": "If6",
+          "type": "if",
+          "position": [
+            -2848,
+            2336
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n18",
+          "name": "WASTERDB SAVE3",
+          "type": "httpRequest",
+          "position": [
+            -2608,
+            2336
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n19",
+          "name": "If7",
+          "type": "if",
+          "position": [
+            -2592,
+            2592
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n20",
+          "name": "WASTERDB SAVE4",
+          "type": "httpRequest",
+          "position": [
+            -2384,
+            2592
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n21",
+          "name": "PAYLOAD Formatter1",
+          "type": "code",
+          "position": [
+            -4016,
+            1696
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n22",
+          "name": "KLAVIYO Prepare1",
+          "type": "code",
+          "position": [
+            -3840,
+            1984
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n23",
+          "name": "Klaviyo Order1",
+          "type": "httpRequest",
+          "position": [
+            -3648,
+            1984
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": true
+        },
+        {
+          "key": "n24",
+          "name": "KLAVIYO Prepare2",
+          "type": "code",
+          "position": [
+            -3280,
+            2848
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n25",
+          "name": "Klaviyo Order2",
+          "type": "httpRequest",
+          "position": [
+            -3088,
+            2848
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": true
+        },
+        {
+          "key": "n26",
+          "name": "RETURN WEBHOOK",
+          "type": "code",
+          "position": [
+            -4272,
+            1696
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n27",
+          "name": "webhook",
+          "type": "webhook",
+          "position": [
+            -5376,
+            2288
+          ],
+          "parameter_fields": [
+            "httpMethod",
+            "options",
+            "path"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n28",
+          "name": "HTTP Request",
+          "type": "httpRequest",
+          "position": [
+            -2944,
+            1424
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n29",
+          "name": "HTTP Request1",
+          "type": "httpRequest",
+          "position": [
+            -2752,
+            1696
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n30",
+          "name": "HTTP Request2",
+          "type": "httpRequest",
+          "position": [
+            -1888,
+            3296
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n31",
+          "name": "If8",
+          "type": "if",
+          "position": [
+            -3808,
+            1424
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n32",
+          "name": "Stop and Error1",
+          "type": "stopAndError",
+          "position": [
+            -3344,
+            1936
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n33",
+          "name": "POST - waster_db - save generator1",
+          "type": "httpRequest",
+          "position": [
+            -3712,
+            3472
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n34",
+          "name": "JS - return_webhook (3)1",
+          "type": "code",
+          "position": [
+            -3472,
+            3472
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n35",
+          "name": "JS - payload_formatter (3)1",
+          "type": "code",
+          "position": [
+            -3232,
+            3472
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n36",
+          "name": "Sticky Note",
+          "type": "stickyNote",
+          "position": [
+            -3056,
+            3248
+          ],
+          "parameter_fields": [
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n37",
+          "name": "Sticky Note16",
+          "type": "stickyNote",
+          "position": [
+            -3056,
+            3584
+          ],
+          "parameter_fields": [
+            "content",
+            "height",
+            "width"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n38",
+          "name": "POST - gtm_server - ga4_order (3)1",
+          "type": "httpRequest",
+          "position": [
+            -2832,
+            3296
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n39",
+          "name": "POST - gtm_server - capi_order (3)1",
+          "type": "httpRequest",
+          "position": [
+            -2832,
+            3632
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": true
+        },
+        {
+          "key": "n40",
+          "name": "IF - STATUS HTTP = ok (5)1",
+          "type": "if",
+          "position": [
+            -2400,
+            3296
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n41",
+          "name": "IF - STATUS HTTP = ok (6)1",
+          "type": "if",
+          "position": [
+            -2400,
+            3632
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": true
+        },
+        {
+          "key": "n42",
+          "name": "POST - waster_db - SW = true (3)1",
+          "type": "httpRequest",
+          "position": [
+            -2144,
+            3296
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n43",
+          "name": "POST - waster_db - SWF = true (3)1",
+          "type": "httpRequest",
+          "position": [
+            -2144,
+            3632
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": true
+        },
+        {
+          "key": "n44",
+          "name": "JS - client_id generator1",
+          "type": "code",
+          "position": [
+            -3936,
+            3472
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n45",
+          "name": "If",
+          "type": "if",
+          "position": [
+            -4800,
+            2080
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n46",
+          "name": "If9",
+          "type": "if",
+          "position": [
+            -3952,
+            2800
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        }
+      ],
+      "edges": [
+        {
+          "from": "n1",
+          "to": "n14",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n16",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n3",
+          "to": "n45",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n3",
+          "to": "n4",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n46",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n44",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n2",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n32",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n6",
+          "to": "n10",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n6",
+          "to": "n11",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n6",
+          "to": "n24",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n7",
+          "to": "n17",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n8",
+          "to": "n19",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n9",
+          "to": "n6",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n10",
+          "to": "n7",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n10",
+          "to": "n11",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n11",
+          "to": "n8",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n11",
+          "to": "n12",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n13",
+          "to": "n28",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n14",
+          "to": "n13",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n15",
+          "to": "n29",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n16",
+          "to": "n15",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n17",
+          "to": "n18",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n19",
+          "to": "n20",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n21",
+          "to": "n31",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n21",
+          "to": "n5",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n21",
+          "to": "n22",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n22",
+          "to": "n23",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n24",
+          "to": "n25",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n26",
+          "to": "n21",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n27",
+          "to": "n3",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n31",
+          "to": "n1",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n31",
+          "to": "n5",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n33",
+          "to": "n34",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n34",
+          "to": "n35",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n35",
+          "to": "n38",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n35",
+          "to": "n39",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n38",
+          "to": "n40",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n39",
+          "to": "n41",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n40",
+          "to": "n42",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n41",
+          "to": "n43",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n42",
+          "to": "n30",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n44",
+          "to": "n33",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n45",
+          "to": "n26",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n45",
+          "to": "n4",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n46",
+          "to": "n9",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n46",
+          "to": "n44",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        }
+      ]
+    },
+    {
+      "name": "[WA][AutoNotify] - Minussi - Carrinho Abandonado",
+      "active": true,
+      "archived": false,
+      "updatedAt": "2026-02-24T17:52:43.170Z",
+      "node_count": 26,
+      "nodes": [
+        {
+          "key": "n1",
+          "name": "Wait",
+          "type": "wait",
+          "position": [
+            400,
+            -320
+          ],
+          "parameter_fields": [
+            "amount"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n2",
+          "name": "Enviar Recover URL",
+          "type": "httpRequest",
+          "position": [
+            400,
+            -624
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n3",
+          "name": "Enviar Recover URL1",
+          "type": "httpRequest",
+          "position": [
+            640,
+            -320
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n4",
+          "name": "Erro: C.T não existe DB",
+          "type": "stopAndError",
+          "position": [
+            864,
+            -208
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n5",
+          "name": "Verificar Compra (WasterDB)",
+          "type": "httpRequest",
+          "position": [
+            144,
+            -432
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n6",
+          "name": "Abandoned Cart",
+          "type": "webhook",
+          "position": [
+            -784,
+            272
+          ],
+          "parameter_fields": [
+            "httpMethod",
+            "options",
+            "path"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n7",
+          "name": "Checkout Created",
+          "type": "webhook",
+          "position": [
+            -864,
+            -560
+          ],
+          "parameter_fields": [
+            "httpMethod",
+            "options",
+            "path"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n8",
+          "name": "Trazer Recover URL",
+          "type": "httpRequest",
+          "position": [
+            -320,
+            208
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n9",
+          "name": "Edit Fields",
+          "type": "set",
+          "position": [
+            704,
+            112
+          ],
+          "parameter_fields": [
+            "assignments",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n10",
+          "name": "Verificar se houve compra",
+          "type": "httpRequest",
+          "position": [
+            224,
+            208
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n11",
+          "name": "If",
+          "type": "if",
+          "position": [
+            480,
+            208
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n12",
+          "name": "Nenhum erro",
+          "type": "stopAndError",
+          "position": [
+            864,
+            -400
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n13",
+          "name": "Nenhum erro2",
+          "type": "stopAndError",
+          "position": [
+            624,
+            -624
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n14",
+          "name": "If2",
+          "type": "if",
+          "position": [
+            -576,
+            224
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n15",
+          "name": "WebHook sem user_data",
+          "type": "stopAndError",
+          "position": [
+            -320,
+            368
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n16",
+          "name": "Wait1",
+          "type": "wait",
+          "position": [
+            0,
+            208
+          ],
+          "parameter_fields": [
+            "amount",
+            "unit"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n17",
+          "name": "Code in JavaScript",
+          "type": "code",
+          "position": [
+            1136,
+            -16
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n18",
+          "name": "Request API",
+          "type": "httpRequest",
+          "position": [
+            912,
+            112
+          ],
+          "parameter_fields": [
+            "bodyParameters",
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n19",
+          "name": "Discord Hook",
+          "type": "httpRequest",
+          "position": [
+            1328,
+            -16
+          ],
+          "parameter_fields": [
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n20",
+          "name": "Verifica se existe telefone",
+          "type": "if",
+          "position": [
+            -448,
+            -560
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n21",
+          "name": "Verificar se houve compra1",
+          "type": "httpRequest",
+          "position": [
+            144,
+            -816
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": true
+        },
+        {
+          "key": "n22",
+          "name": "If1",
+          "type": "if",
+          "position": [
+            368,
+            -816
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": true
+        },
+        {
+          "key": "n23",
+          "name": "Compra realizada",
+          "type": "stopAndError",
+          "position": [
+            704,
+            304
+          ],
+          "parameter_fields": [
+            "errorMessage"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n24",
+          "name": "Adicionar UTM's",
+          "type": "set",
+          "position": [
+            -112,
+            -704
+          ],
+          "parameter_fields": [
+            "assignments",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n25",
+          "name": "Adicionar UTM's1",
+          "type": "set",
+          "position": [
+            -112,
+            -432
+          ],
+          "parameter_fields": [
+            "assignments",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n26",
+          "name": "If3",
+          "type": "if",
+          "position": [
+            -656,
+            -560
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        }
+      ],
+      "edges": [
+        {
+          "from": "n1",
+          "to": "n3",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n3",
+          "to": "n12",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n3",
+          "to": "n4",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n2",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n1",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n7",
+          "to": "n26",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n6",
+          "to": "n14",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n8",
+          "to": "n16",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n10",
+          "to": "n11",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n11",
+          "to": "n9",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n11",
+          "to": "n23",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n9",
+          "to": "n18",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n13",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n14",
+          "to": "n8",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n14",
+          "to": "n15",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n16",
+          "to": "n10",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n17",
+          "to": "n19",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n18",
+          "to": "n17",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n20",
+          "to": "n24",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n20",
+          "to": "n25",
+          "channel": "main",
+          "lane": 1,
+          "input": 0
+        },
+        {
+          "from": "n21",
+          "to": "n22",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n24",
+          "to": "n21",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n25",
+          "to": "n5",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n26",
+          "to": "n20",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        }
+      ]
+    },
+    {
+      "name": "[SOUREI][GTM] Publicacao de container - Aviso Discord e WhatsApp",
+      "active": true,
+      "archived": false,
+      "updatedAt": "2026-08-17T18:32:46.068Z",
+      "node_count": 5,
+      "nodes": [
+        {
+          "key": "n1",
+          "name": "Gmail - aviso do Tag Manager",
+          "type": "gmailTrigger",
+          "position": [
+            -220,
+            0
+          ],
+          "parameter_fields": [
+            "filters",
+            "options",
+            "pollTimes",
+            "simple"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n2",
+          "name": "Monta o aviso",
+          "type": "code",
+          "position": [
+            20,
+            0
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n3",
+          "name": "Discord - avisa no canal",
+          "type": "discord",
+          "position": [
+            260,
+            0
+          ],
+          "parameter_fields": [
+            "authentication",
+            "embeds",
+            "options",
+            "resource"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n4",
+          "name": "Destino do WhatsApp",
+          "type": "code",
+          "position": [
+            260,
+            200
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n5",
+          "name": "WhatsApp - Evolution API",
+          "type": "httpRequest",
+          "position": [
+            500,
+            200
+          ],
+          "parameter_fields": [
+            "authentication",
+            "bodyParameters",
+            "genericAuthType",
+            "method",
+            "options",
+            "sendBody",
+            "url"
+          ],
+          "disabled": false
+        }
+      ],
+      "edges": [
+        {
+          "from": "n1",
+          "to": "n2",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n3",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n4",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n5",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        }
+      ]
+    },
+    {
+      "name": "Ela Decora - Facebook Ads/Google Ads",
+      "active": true,
+      "archived": false,
+      "updatedAt": "2025-11-19T19:25:19.393Z",
+      "node_count": 7,
+      "nodes": [
+        {
+          "key": "n1",
+          "name": "Code in JavaScript",
+          "type": "code",
+          "position": [
+            640,
+            112
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n2",
+          "name": "Schedule Trigger",
+          "type": "scheduleTrigger",
+          "position": [
+            -32,
+            256
+          ],
+          "parameter_fields": [
+            "rule"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n3",
+          "name": "Google Ads - Puxa as infos",
+          "type": "httpRequest",
+          "position": [
+            304,
+            368
+          ],
+          "parameter_fields": [
+            "authentication",
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "nodeCredentialType",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n4",
+          "name": "Code in JavaScript1",
+          "type": "code",
+          "position": [
+            592,
+            368
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n5",
+          "name": "Facebook Ads - Puxa as infos",
+          "type": "httpRequest",
+          "position": [
+            288,
+            112
+          ],
+          "parameter_fields": [
+            "headerParameters",
+            "options",
+            "queryParameters",
+            "sendHeaders",
+            "sendQuery",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n6",
+          "name": "Append or update row in sheet",
+          "type": "googleSheets",
+          "position": [
+            912,
+            112
+          ],
+          "parameter_fields": [
+            "columns",
+            "documentId",
+            "operation",
+            "options",
+            "sheetName"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n7",
+          "name": "Append or update row in sheet1",
+          "type": "googleSheets",
+          "position": [
+            928,
+            368
+          ],
+          "parameter_fields": [
+            "columns",
+            "documentId",
+            "operation",
+            "options",
+            "sheetName"
+          ],
+          "disabled": false
+        }
+      ],
+      "edges": [
+        {
+          "from": "n1",
+          "to": "n6",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n5",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n3",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n3",
+          "to": "n4",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n7",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n1",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        }
+      ]
+    },
+    {
+      "name": "[WA][MATRIX] beautyin",
+      "active": true,
+      "archived": false,
+      "updatedAt": "2026-09-01T16:26:38.156Z",
+      "node_count": 16,
+      "nodes": [
+        {
+          "key": "n1",
+          "name": "Code - Build GraphQL UTM Query",
+          "type": "code",
+          "position": [
+            896,
+            -80
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n2",
+          "name": "HTTP Request - Buscar UTMs GraphQL",
+          "type": "httpRequest",
+          "position": [
+            1120,
+            -80
+          ],
+          "parameter_fields": [
+            "authentication",
+            "headerParameters",
+            "jsonBody",
+            "method",
+            "nodeCredentialType",
+            "options",
+            "sendBody",
+            "sendHeaders",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n3",
+          "name": "Schedule Trigger - 1 min",
+          "type": "scheduleTrigger",
+          "position": [
+            -224,
+            -80
+          ],
+          "parameter_fields": [
+            "rule"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n4",
+          "name": "HTTP Request - Ler última data",
+          "type": "httpRequest",
+          "position": [
+            0,
+            -80
+          ],
+          "parameter_fields": [
+            "options",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n5",
+          "name": "Code - Formatar data",
+          "type": "code",
+          "position": [
+            224,
+            -80
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n6",
+          "name": "HTTP Request - Buscar pedidos Shopify",
+          "type": "httpRequest",
+          "position": [
+            448,
+            -80
+          ],
+          "parameter_fields": [
+            "authentication",
+            "headerParameters",
+            "nodeCredentialType",
+            "options",
+            "queryParameters",
+            "sendHeaders",
+            "sendQuery",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n7",
+          "name": "IF - Verificar se houve compra",
+          "type": "if",
+          "position": [
+            672,
+            -80
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n8",
+          "name": "Code - Filtrar e formatar pedidos",
+          "type": "code",
+          "position": [
+            1344,
+            -80
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n9",
+          "name": "HTTP Request - Gravar na planilha",
+          "type": "httpRequest",
+          "position": [
+            1568,
+            -80
+          ],
+          "parameter_fields": [
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n10",
+          "name": "Schedule Trigger - 15min",
+          "type": "scheduleTrigger",
+          "position": [
+            -224,
+            192
+          ],
+          "parameter_fields": [
+            "rule"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n11",
+          "name": "Code - Calcular updated_at_min",
+          "type": "code",
+          "position": [
+            0,
+            192
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n12",
+          "name": "HTTP Request - Buscar pedidos atualizados",
+          "type": "httpRequest",
+          "position": [
+            224,
+            192
+          ],
+          "parameter_fields": [
+            "authentication",
+            "headerParameters",
+            "nodeCredentialType",
+            "options",
+            "sendHeaders",
+            "url"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n13",
+          "name": "IF - Verificar atualizações de pedidos",
+          "type": "if",
+          "position": [
+            448,
+            192
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n14",
+          "name": "Code - Montar payload de update",
+          "type": "code",
+          "position": [
+            672,
+            192
+          ],
+          "parameter_fields": [
+            "jsCode"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n15",
+          "name": "IF - Verificar se precisa atualizar planilha",
+          "type": "if",
+          "position": [
+            880,
+            192
+          ],
+          "parameter_fields": [
+            "conditions",
+            "options"
+          ],
+          "disabled": false
+        },
+        {
+          "key": "n16",
+          "name": "HTTP Request - Atualizar status na planilha",
+          "type": "httpRequest",
+          "position": [
+            1120,
+            192
+          ],
+          "parameter_fields": [
+            "jsonBody",
+            "method",
+            "options",
+            "sendBody",
+            "specifyBody",
+            "url"
+          ],
+          "disabled": false
+        }
+      ],
+      "edges": [
+        {
+          "from": "n1",
+          "to": "n2",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n2",
+          "to": "n8",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n3",
+          "to": "n4",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n4",
+          "to": "n5",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n5",
+          "to": "n6",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n6",
+          "to": "n7",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n7",
+          "to": "n1",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n8",
+          "to": "n9",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n10",
+          "to": "n11",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n11",
+          "to": "n12",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n12",
+          "to": "n13",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n13",
+          "to": "n14",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n14",
+          "to": "n15",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        },
+        {
+          "from": "n15",
+          "to": "n16",
+          "channel": "main",
+          "lane": 0,
+          "input": 0
+        }
+      ]
+    }
+  ]
+}

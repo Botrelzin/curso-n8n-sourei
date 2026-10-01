@@ -1,0 +1,23 @@
+Webhook é um contrato.
+
+Um webhook é uma chamada iniciada pelo sistema de origem quando algo acontece. No nosso caso, pode ser a aprovação de um pedido. Mais importante do que decorar o formato é entender o contrato: quem envia, qual evento dispara, o que precisa chegar, em quanto tempo devemos responder e como o emissor reage quando há falha. Sem essas respostas, qualquer automação parece funcionar até o primeiro atraso.
+
+Receba e valide o mínimo.
+
+Ao receber a chamada, a primeira responsabilidade é verificar o mínimo necessário. O conteúdo pode ser lido? O evento é do tipo esperado? A origem atende ao mecanismo de autenticação definido? Os campos essenciais existem? Essa validação precisa ser curta. Operações demoradas, como chamar vários destinos, não devem segurar a conexão enquanto o emissor espera. O objetivo inicial é decidir se a mensagem pode ser aceita e protegida.
+
+A resposta fala do recebimento.
+
+Uma resposta de sucesso informa que a mensagem foi recebida conforme o contrato. Ela não prova, sozinha, que Analytics ou mídia paga já registraram a conversão. Quando o processamento será assíncrono, a resposta pode indicar aceitação e o trabalho continua depois. Respostas de erro também precisam ser intencionais. Rejeitar um conteúdo inválido é diferente de informar uma indisponibilidade transitória. Essa diferença orienta se o emissor deve corrigir ou tentar novamente.
+
+Persista antes do trabalho longo.
+
+Depois de aceitar, registre o evento em uma camada capaz de sobreviver a reinícios e oscilações. A persistência cria uma fronteira segura entre a chamada curta e o processamento longo. O worker pode então consumir o trabalho, normalizar o pedido e acionar os destinos. Se houver falha, ainda existe uma referência do que foi recebido. Sem essa proteção, um timeout ou reinício pode transformar uma venda válida em um evento perdido.
+
+Tente novamente com controle.
+
+Nem todo erro merece retry. Timeout, limitação temporária e indisponibilidade podem justificar nova tentativa. Payload inválido e regra de negócio recusada costumam exigir correção. Toda repetição precisa de limite, espera progressiva, motivo registrado e uma chave que impeça duplicação. Quando as tentativas acabam, o evento vai para uma fila de falhas. Depois da correção, um backfill controlado reprocessa apenas a janela necessária.
+
+Leia o ciclo completo.
+
+O ciclo correto fica assim: o emissor chama, o receptor valida, a resposta encerra a espera da origem, a persistência protege a mensagem e o worker executa o restante. Status e logs acompanham tudo. Essa separação não complica o sistema. Ela torna cada promessa explícita. Quando alguém pergunta se uma compra foi processada, não olhamos apenas a resposta do webhook. Seguimos as evidências até o resultado esperado.

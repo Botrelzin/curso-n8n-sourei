@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="05-identidade-deduplicacao-title 05-identidade-deduplicacao-desc">
+  <title id="05-identidade-deduplicacao-title">Identidade e deduplicação</title>
+  <desc id="05-identidade-deduplicacao-desc">Identidade melhora associação. A chave estável evita contagem repetida.</desc>
+  <style>
+    svg { background:#ffffff; font-family:Inter,Segoe UI,Arial,sans-serif; }
+    .kicker { font-size:13px; font-weight:800; letter-spacing:2px; fill:#12727c; }
+    .heading { font-size:29px; font-weight:800; fill:#111827; }
+    .intro { font-size:14px; fill:#4b5563; }
+    .node-title { font-size:16px; font-weight:800; fill:#111827; }
+    .node-sub { font-size:12px; fill:#4b5563; }
+    .badge { font-size:12px; font-weight:800; fill:#ffffff; }
+    .edge-label { font-size:11px; font-weight:700; fill:#4b5563; }
+    .section { font-size:12px; font-weight:800; letter-spacing:1.4px; fill:#1e4a96; }
+    .note { font-size:13px; fill:#374151; }
+    .note-strong { font-size:13px; font-weight:800; fill:#111827; }
+    .footer { font-size:12px; fill:#6b7280; }
+    .mono { font-family:Consolas,monospace; font-size:12px; fill:#163a78; }
+    @media (prefers-reduced-motion: reduce) { * { animation:none!important; } }
+  </style>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="0" y="0" width="16" height="675" fill="#1e4a96"/>
+  <rect x="16" y="0" width="7" height="675" fill="#25acb9"/>
+  <text x="58" y="52" class="kicker">CONFIANÇA DO EVENTO</text>
+  <text x="58" y="88" class="heading">Identidade e deduplicação</text>
+  <text x="58" y="116" class="intro">Identidade melhora associação. A chave estável evita contagem repetida.</text>
+  <line x1="58" y1="137" x2="1142" y2="137" stroke="#e3e5ea"/>
+  <g class="node"><rect x="58" y="206" width="224" height="116" rx="16" fill="#f4f6f9" stroke="#4b5563" stroke-width="2"/><circle cx="86" cy="234" r="14" fill="#4b5563"/><text x="86" y="239" class="badge" text-anchor="middle">1</text><text x="114" y="241" class="node-title" text-anchor="start">Sinais de identidade</text><text x="114" y="263" class="node-sub" text-anchor="start">e-mail, telefone, cliente</text></g><g class="node"><rect x="58" y="380" width="224" height="116" rx="16" fill="#f4f6f9" stroke="#4b5563" stroke-width="2"/><circle cx="86" cy="408" r="14" fill="#4b5563"/><text x="86" y="413" class="badge" text-anchor="middle">2</text><text x="114" y="415" class="node-title" text-anchor="start">Chave do evento</text><text x="114" y="437" class="node-sub" text-anchor="start">pedido + tipo + tempo</text></g><path d="M 282 264 L 440 312" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="440,312 431.4,302.5 427.6,315.1" fill="#12727c"/><rect x="306.0" y="263.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="361.0" y="279.0" class="edge-label" text-anchor="middle">normaliza</text><path d="M 282 438 L 440 370" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="440,370 427.3,368.3 432.5,380.4" fill="#12727c"/><rect x="306.0" y="379.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="361.0" y="395.0" class="edge-label" text-anchor="middle">compõe</text><g class="node"><rect x="440" y="258" width="300" height="166" rx="16" fill="#e7edf7" stroke="#1e4a96" stroke-width="2"/><circle cx="468" cy="286" r="14" fill="#1e4a96"/><text x="468" y="291" class="badge" text-anchor="middle">ID</text><text x="496" y="293" class="node-title" text-anchor="start">Camada de identidade</text><text x="496" y="315" class="node-sub" text-anchor="start">normaliza • protege • associa</text></g><text x="468" y="350" class="note-strong" text-anchor="start">mesma pessoa, sinais consistentes</text><text x="468" y="378" class="note" text-anchor="start">mesmo evento, chave estável</text><path d="M 740 312 L 894 248" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="894,248 881.3,246.1 886.4,258.3" fill="#12727c"/><rect x="762.0" y="255.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="817.0" y="271.0" class="edge-label" text-anchor="middle">enriquece</text><path d="M 740 370 L 894 438" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="894,438 886.6,427.5 881.3,439.6" fill="#12727c"/><rect x="762.0" y="379.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="817.0" y="395.0" class="edge-label" text-anchor="middle">deduplica</text><g class="node"><rect x="894" y="196" width="248" height="108" rx="16" fill="#e2f4f5" stroke="#12727c" stroke-width="2"/><circle cx="922" cy="224" r="14" fill="#12727c"/><text x="922" y="229" class="badge" text-anchor="middle">A</text><text x="950" y="231" class="node-title" text-anchor="start">Matching</text><text x="950" y="253" class="node-sub" text-anchor="start">mais chance de associação</text></g><g class="node"><rect x="894" y="386" width="248" height="108" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><circle cx="922" cy="414" r="14" fill="#16a34a"/><text x="922" y="419" class="badge" text-anchor="middle">B</text><text x="950" y="421" class="node-title" text-anchor="start">Deduplicação</text><text x="950" y="443" class="node-sub" text-anchor="start">uma compra, uma contagem</text></g><rect x="380" y="494" width="424" height="74" rx="14" fill="#fbe4e4" stroke="#d14343"/><text x="592" y="524" class="section" text-anchor="middle">NUNCA USE O DADO BRUTO SEM REGRA</text><text x="592" y="548" class="note" text-anchor="middle">Consentimento e minimização vêm antes do envio.</text>
+  <line x1="58" y1="628" x2="1142" y2="628" stroke="#e3e5ea"/>
+  <circle cx="70" cy="650" r="5" fill="#25acb9"/>
+  <text x="84" y="654" class="footer">Privacidade, normalização e estabilidade são parte do desenho.</text>
+  <text x="1142" y="654" class="footer" text-anchor="end">SOUREI • N8N EM PRODUÇÃO</text>
+</svg>

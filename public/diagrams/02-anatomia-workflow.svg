@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="02-anatomia-workflow-title 02-anatomia-workflow-desc">
+  <title id="02-anatomia-workflow-title">Anatomia de um workflow</title>
+  <desc id="02-anatomia-workflow-desc">Um workflow legível separa entrada, validação, transformação, decisão e saída.</desc>
+  <style>
+    svg { background:#ffffff; font-family:Inter,Segoe UI,Arial,sans-serif; }
+    .kicker { font-size:13px; font-weight:800; letter-spacing:2px; fill:#12727c; }
+    .heading { font-size:29px; font-weight:800; fill:#111827; }
+    .intro { font-size:14px; fill:#4b5563; }
+    .node-title { font-size:16px; font-weight:800; fill:#111827; }
+    .node-sub { font-size:12px; fill:#4b5563; }
+    .badge { font-size:12px; font-weight:800; fill:#ffffff; }
+    .edge-label { font-size:11px; font-weight:700; fill:#4b5563; }
+    .section { font-size:12px; font-weight:800; letter-spacing:1.4px; fill:#1e4a96; }
+    .note { font-size:13px; fill:#374151; }
+    .note-strong { font-size:13px; font-weight:800; fill:#111827; }
+    .footer { font-size:12px; fill:#6b7280; }
+    .mono { font-family:Consolas,monospace; font-size:12px; fill:#163a78; }
+    @media (prefers-reduced-motion: reduce) { * { animation:none!important; } }
+  </style>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="0" y="0" width="16" height="675" fill="#1e4a96"/>
+  <rect x="16" y="0" width="7" height="675" fill="#25acb9"/>
+  <text x="58" y="52" class="kicker">LEITURA ESTRUTURAL</text>
+  <text x="58" y="88" class="heading">Anatomia de um workflow</text>
+  <text x="58" y="116" class="intro">Um workflow legível separa entrada, validação, transformação, decisão e saída.</text>
+  <line x1="58" y1="137" x2="1142" y2="137" stroke="#e3e5ea"/>
+  <rect x="58" y="170" width="1084" height="390" rx="24" fill="#f4f6f9" stroke="#cdd0d6"/><path d="M 202 320 L 258 320" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="258,320 247.0,313.4 247.0,326.6" fill="#12727c"/><rect x="175.0" y="295.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="230.0" y="311.0" class="edge-label" text-anchor="middle">entrada</text><path d="M 418 320 L 474 320" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="474,320 463.0,313.4 463.0,326.6" fill="#12727c"/><rect x="391.0" y="295.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="446.0" y="311.0" class="edge-label" text-anchor="middle">dados</text><path d="M 634 320 L 690 320" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="690,320 679.0,313.4 679.0,326.6" fill="#12727c"/><rect x="607.0" y="295.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="662.0" y="311.0" class="edge-label" text-anchor="middle">decisão</text><path d="M 850 320 L 906 320" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="906,320 895.0,313.4 895.0,326.6" fill="#12727c"/><rect x="823.0" y="295.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="878.0" y="311.0" class="edge-label" text-anchor="middle">efeito</text><g class="node"><rect x="82" y="268" width="120" height="104" rx="16" fill="#e2f4f5" stroke="#12727c" stroke-width="2"/><circle cx="110" cy="296" r="14" fill="#12727c"/><text x="110" y="301" class="badge" text-anchor="middle">1</text><text x="138" y="303" class="node-title" text-anchor="start">Trigger</text><text x="138" y="325" class="node-sub" text-anchor="start">quando inicia</text></g><g class="node"><rect x="258" y="268" width="160" height="104" rx="16" fill="#e7edf7" stroke="#1e4a96" stroke-width="2"/><circle cx="286" cy="296" r="14" fill="#1e4a96"/><text x="286" y="301" class="badge" text-anchor="middle">2</text><text x="314" y="303" class="node-title" text-anchor="start">Validação</text><text x="314" y="325" class="node-sub" text-anchor="start">contrato mínimo</text></g><g class="node"><rect x="474" y="268" width="160" height="104" rx="16" fill="#e7edf7" stroke="#1e4a96" stroke-width="2"/><circle cx="502" cy="296" r="14" fill="#1e4a96"/><text x="502" y="301" class="badge" text-anchor="middle">3</text><text x="530" y="303" class="node-title" text-anchor="start">Transformação</text><text x="530" y="325" class="node-sub" text-anchor="start">modelo canônico</text></g><g class="node"><rect x="690" y="268" width="160" height="104" rx="16" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><circle cx="718" cy="296" r="14" fill="#d97706"/><text x="718" y="301" class="badge" text-anchor="middle">4</text><text x="746" y="303" class="node-title" text-anchor="start">Roteamento</text><text x="746" y="325" class="node-sub" text-anchor="start">qual caminho</text></g><g class="node"><rect x="906" y="268" width="180" height="104" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><circle cx="934" cy="296" r="14" fill="#16a34a"/><text x="934" y="301" class="badge" text-anchor="middle">5</text><text x="962" y="303" class="node-title" text-anchor="start">Saída</text><text x="962" y="325" class="node-sub" text-anchor="start">envia e registra</text></g><text x="82" y="212" class="section" text-anchor="start">LEIA DA ESQUERDA PARA A DIREITA</text><text x="82" y="238" class="note" text-anchor="start">Cada nó deve responder uma pergunta clara. Conexões mostram dependência e ordem.</text><rect x="82" y="425" width="1004" height="82" rx="12" fill="#ffffff" stroke="#e3e5ea"/><text x="104" y="454" class="section" text-anchor="start">PERGUNTAS DE LEITURA</text><text x="104" y="480" class="note-strong" text-anchor="start">O que entra? O que muda? Onde bifurca? O que sai? Como sabemos que funcionou?</text>
+  <line x1="58" y1="628" x2="1142" y2="628" stroke="#e3e5ea"/>
+  <circle cx="70" cy="650" r="5" fill="#25acb9"/>
+  <text x="84" y="654" class="footer">Nós explicam ações. Conexões explicam a história.</text>
+  <text x="1142" y="654" class="footer" text-anchor="end">SOUREI • N8N EM PRODUÇÃO</text>
+</svg>

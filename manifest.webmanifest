@@ -1,0 +1,18 @@
+{
+  "name": "n8n aplicado | Sourei Lab",
+  "short_name": "Sourei n8n",
+  "description": "Curso interativo de n8n aplicado às operações de tracking.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#121018",
+  "theme_color": "#ff6a45",
+  "icons": [
+    {
+      "src": "public/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

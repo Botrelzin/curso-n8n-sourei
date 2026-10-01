@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="09-metodo-debugging-title 09-metodo-debugging-desc">
+  <title id="09-metodo-debugging-title">Método de debugging</title>
+  <desc id="09-metodo-debugging-desc">Siga evidências de ponta a ponta, teste uma hipótese por vez e registre a conclusão.</desc>
+  <style>
+    svg { background:#ffffff; font-family:Inter,Segoe UI,Arial,sans-serif; }
+    .kicker { font-size:13px; font-weight:800; letter-spacing:2px; fill:#12727c; }
+    .heading { font-size:29px; font-weight:800; fill:#111827; }
+    .intro { font-size:14px; fill:#4b5563; }
+    .node-title { font-size:16px; font-weight:800; fill:#111827; }
+    .node-sub { font-size:12px; fill:#4b5563; }
+    .badge { font-size:12px; font-weight:800; fill:#ffffff; }
+    .edge-label { font-size:11px; font-weight:700; fill:#4b5563; }
+    .section { font-size:12px; font-weight:800; letter-spacing:1.4px; fill:#1e4a96; }
+    .note { font-size:13px; fill:#374151; }
+    .note-strong { font-size:13px; font-weight:800; fill:#111827; }
+    .footer { font-size:12px; fill:#6b7280; }
+    .mono { font-family:Consolas,monospace; font-size:12px; fill:#163a78; }
+    @media (prefers-reduced-motion: reduce) { * { animation:none!important; } }
+  </style>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="0" y="0" width="16" height="675" fill="#1e4a96"/>
+  <rect x="16" y="0" width="7" height="675" fill="#25acb9"/>
+  <text x="58" y="52" class="kicker">DIAGNÓSTICO REPRODUZÍVEL</text>
+  <text x="58" y="88" class="heading">Método de debugging</text>
+  <text x="58" y="116" class="intro">Siga evidências de ponta a ponta, teste uma hipótese por vez e registre a conclusão.</text>
+  <line x1="58" y1="137" x2="1142" y2="137" stroke="#e3e5ea"/>
+  <g class="node"><rect x="58" y="202" width="188" height="106" rx="16" fill="#f4f6f9" stroke="#4b5563" stroke-width="2"/><circle cx="86" cy="230" r="14" fill="#4b5563"/><text x="86" y="235" class="badge" text-anchor="middle">1</text><text x="114" y="237" class="node-title" text-anchor="start">1. Sintoma</text><text x="114" y="259" class="node-sub" text-anchor="start">o que deveria ocorrer?</text></g><path d="M 246 255 L 288 255" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="288,255 277.0,248.4 277.0,261.6" fill="#12727c"/><g class="node"><rect x="288" y="202" width="188" height="106" rx="16" fill="#e7edf7" stroke="#1e4a96" stroke-width="2"/><circle cx="316" cy="230" r="14" fill="#1e4a96"/><text x="316" y="235" class="badge" text-anchor="middle">2</text><text x="344" y="237" class="node-title" text-anchor="start">2. Evidência</text><text x="344" y="259" class="node-sub" text-anchor="start">execução, payload, resposta</text></g><path d="M 476 255 L 518 255" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="518,255 507.0,248.4 507.0,261.6" fill="#12727c"/><g class="node"><rect x="518" y="202" width="188" height="106" rx="16" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><circle cx="546" cy="230" r="14" fill="#d97706"/><text x="546" y="235" class="badge" text-anchor="middle">3</text><text x="574" y="237" class="node-title" text-anchor="start">3. Hipótese</text><text x="574" y="259" class="node-sub" text-anchor="start">uma causa testável</text></g><path d="M 706 255 L 748 255" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="748,255 737.0,248.4 737.0,261.6" fill="#12727c"/><g class="node"><rect x="748" y="202" width="188" height="106" rx="16" fill="#e2f4f5" stroke="#12727c" stroke-width="2"/><circle cx="776" cy="230" r="14" fill="#12727c"/><text x="776" y="235" class="badge" text-anchor="middle">4</text><text x="804" y="237" class="node-title" text-anchor="start">4. Teste</text><text x="804" y="259" class="node-sub" text-anchor="start">mude uma variável</text></g><path d="M 936 255 L 978 255" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="978,255 967.0,248.4 967.0,261.6" fill="#12727c"/><g class="node"><rect x="978" y="202" width="164" height="106" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><circle cx="1006" cy="230" r="14" fill="#16a34a"/><text x="1006" y="235" class="badge" text-anchor="middle">5</text><text x="1034" y="237" class="node-title" text-anchor="start">5. Decisão</text><text x="1034" y="259" class="node-sub" text-anchor="start">corrigir ou descartar</text></g><path d="M 1060 308 L 1060 404" fill="none" stroke="#12727c" stroke-width="3" stroke-linecap="round"/><polygon points="1060,404 1066.6,393.0 1053.4,393.0" fill="#12727c"/><rect x="1005.0" y="331.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="1060.0" y="347.0" class="edge-label" text-anchor="middle">documenta</text><path d="M 978 457 C 600.0 417, 600.0 417, 222 457" fill="none" stroke="#d97706" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/><polygon points="222,457 233.0,463.6 233.0,450.4" fill="#d97706"/><rect x="545.0" y="412.0" width="110" height="22" rx="11" fill="#ffffff"/><text x="600.0" y="428.0" class="edge-label" text-anchor="middle">se não resolveu</text><g class="node"><rect x="414" y="404" width="372" height="106" rx="16" fill="#e7edf7" stroke="#1e4a96" stroke-width="2"/><circle cx="442" cy="432" r="14" fill="#1e4a96"/><text x="442" y="437" class="badge" text-anchor="middle">⌁</text><text x="470" y="439" class="node-title" text-anchor="start">Linha do tempo do purchase</text><text x="470" y="461" class="node-sub" text-anchor="start">origem → execução → destino → confirmação</text></g><rect x="58" y="541" width="1084" height="46" rx="12" fill="#e2f4f5" stroke="#25acb9"/><text x="600" y="570" class="note-strong" text-anchor="middle">Comece no sintoma, siga a mesma chave e pare de adivinhar.</text>
+  <line x1="58" y1="628" x2="1142" y2="628" stroke="#e3e5ea"/>
+  <circle cx="70" cy="650" r="5" fill="#25acb9"/>
+  <text x="84" y="654" class="footer">Uma linha do tempo comum conecta sistemas que exibem logs diferentes.</text>
+  <text x="1142" y="654" class="footer" text-anchor="end">SOUREI • N8N EM PRODUÇÃO</text>
+</svg>

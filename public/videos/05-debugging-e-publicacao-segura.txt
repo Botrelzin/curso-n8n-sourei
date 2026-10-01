@@ -1,0 +1,27 @@
+Defina o sintoma.
+
+Debugging começa com uma frase verificável. Em vez de dizer que o tracking está errado, diga qual compra, em qual janela e em qual destino não produziu o resultado esperado. Registre também o comportamento esperado. Essa definição cria um ponto de partida comum e impede que a equipe investigue problemas diferentes com o mesmo nome. Um bom sintoma já indica qual evidência precisamos procurar primeiro.
+
+Siga evidências, não palpites.
+
+Use a chave de correlação para montar a linha do tempo. Confirme a origem, o recebimento, a execução, a transformação, o envio e a resposta. Em cada transição, compare o contrato esperado com o dado observado. Pare no primeiro desvio. Se o evento já chegou incorreto ao n8n, não faz sentido começar pela interface do destino. Se saiu correto e recebeu uma rejeição, a resposta orienta a próxima hipótese.
+
+Teste uma hipótese por vez.
+
+Formule uma causa que possa ser confirmada ou descartada. Por exemplo: a condição de roteamento recusou pedidos sem um campo opcional. Crie um caso mínimo, altere uma variável e observe o resultado. Não faça várias correções simultâneas, porque um teste positivo não mostrará qual mudança resolveu. Registre a hipótese, o teste e a conclusão. Quando a hipótese falhar, descarte-a e use a nova evidência para escolher a próxima.
+
+Prepare uma correção isolada.
+
+Com a causa confirmada, faça a menor mudança capaz de corrigi-la. Trabalhe em rascunho, com nome claro e escopo conhecido. Prepare casos de teste para o caminho corrigido, o caminho que já funcionava e pelo menos um cenário de falha. Se a mudança afetar retry ou backfill, valide limite, espera e deduplicação. O objetivo é provar que resolvemos o defeito sem criar uma regressão silenciosa.
+
+Crie uma versão reversível.
+
+Antes de publicar, gere um snapshot nomeado e registre o que mudou, por que mudou, quais evidências sustentam a decisão e quem aprovou. Defina também o sinal de sucesso e o sinal de rollback. Uma publicação segura não depende de memória. Ela deixa um estado anterior conhecido e um caminho explícito para voltar. A aprovação é um portão humano, não uma consequência automática de o teste ter passado.
+
+Publique e observe.
+
+Após a publicação, acompanhe uma janela definida. Observe volume, taxa de erro, respostas dos destinos e exemplos controlados de compra. Compare com o comportamento anterior. Não interprete ausência imediata de erro como sucesso. Alguns destinos processam de forma assíncrona. Use os sinais definidos no plano e mantenha o responsável disponível durante a janela. Se surgir regressão material, interrompa a expansão e execute o rollback.
+
+Feche o ciclo.
+
+Depois da observação, registre o resultado. Se funcionou, marque a versão como estável e documente a causa corrigida. Se foi necessário voltar, preserve as evidências, restaure a versão anterior e reabra a investigação sem repetir envios indiscriminadamente. O método completo é este: sintoma específico, linha do tempo, hipótese testável, correção isolada, versão reversível e observação. Debugging e publicação pertencem ao mesmo ciclo porque a correção só termina quando opera com segurança.

@@ -1,0 +1,23 @@
+A pergunta central.
+
+Quando uma loja aprova um pedido, a conversão ainda precisa atravessar vários sistemas antes de aparecer nos relatórios e nas plataformas de mídia. O ponto central desta operação é simples: cada compra deve sair da loja, ser transformada em um evento confiável, chegar aos destinos corretos e deixar evidências em cada etapa. Vamos percorrer esse caminho sem tratar a arquitetura como uma caixa-preta.
+
+Da loja ao Purchasecron.
+
+A loja é a origem do fato comercial. Ela informa que o pedido foi aprovado e envia o webhook. O Purchasecron recebe esse sinal com uma função operacional: impedir que uma oscilação momentânea no restante da cadeia faça a compra desaparecer. Ele captura, registra o contexto necessário e encaminha o evento. Aqui, rapidez no recebimento e proteção contra perda valem mais do que tentar concluir tudo na mesma chamada.
+
+O papel do n8n.
+
+No n8n, o pedido vira trabalho orquestrado. O workflow valida os campos mínimos, normaliza nomes e tipos, decide quais caminhos devem rodar e registra o resultado de cada passo. O n8n não é apenas um cabo entre sistemas. Ele é o lugar onde a operação fica explícita. Quando um nó falha, precisamos saber o que entrou, qual regra foi aplicada e qual foi a saída. Isso permite corrigir a causa sem repetir a compra às cegas.
+
+GTM server e destinos.
+
+Depois da orquestração, o evento chega ao GTM server. Essa camada governa a medição server-side e adapta a informação para cada destino. Analytics, mídia paga e outros sistemas não precisam receber exatamente o mesmo formato. Por isso usamos um evento canônico como fonte e adaptadores nas bordas. O fan-out distribui a compra sem misturar os resultados. Se um destino falha, o sucesso dos demais continua registrado e a recuperação pode ser específica.
+
+Confirmação e evidência.
+
+A confirmação fecha o ciclo, mas não deve ser confundida com o simples recebimento do webhook. Receber significa que o evento entrou. Confirmar significa que a etapa esperada terminou segundo o contrato definido. Entre uma coisa e outra ficam status, respostas, tentativas e logs. Essa separação permite responder perguntas concretas: a loja enviou? O n8n processou? O GTM server aceitou? Cada destino respondeu? A operação deixa de depender de suposição.
+
+Resumo operacional.
+
+Guarde esta leitura: a loja declara a compra, o Purchasecron protege a entrada, o n8n organiza o trabalho, o GTM server governa os envios e os destinos registram seus próprios resultados. A confirmação fecha o ciclo com evidência. Quando cada camada tem uma responsabilidade clara, fica mais fácil evoluir, observar e recuperar falhas. Nos próximos vídeos, vamos abrir o workflow, entender webhooks e seguir uma compra realista de ponta a ponta.

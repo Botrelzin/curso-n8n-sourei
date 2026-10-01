@@ -1,0 +1,32 @@
+{
+  "event": "purchase",
+  "transaction_id": "PEDIDO-TREINO-1001",
+  "currency": "BRL",
+  "value": 249.8,
+  "shipping": 18.9,
+  "coupon": "TREINO10",
+  "items": [
+    {
+      "item_id": "SKU-TREINO-A",
+      "item_name": "Produto de treinamento A",
+      "item_variant": "Azul / M",
+      "price": 99.9,
+      "quantity": 2
+    },
+    {
+      "item_id": "SKU-TREINO-B",
+      "item_name": "Produto de treinamento B",
+      "price": 50,
+      "quantity": 1
+    }
+  ],
+  "identity": {
+    "client_id": "CLIENTE.SINTETICO",
+    "session_id": "1700000000"
+  },
+  "routing": {
+    "ga4": true,
+    "meta": true,
+    "ads": false
+  }
+}
