@@ -1,4 +1,4 @@
-const CACHE = 'sourei-n8n-e7314d602ab9';
+const CACHE = 'sourei-n8n-afcd28191eb9';
 const ASSETS = [
   "./",
   "./index.html",
